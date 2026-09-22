@@ -6,7 +6,7 @@
 <title>Hamacas Lizaraso — Catálogo Oficial 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
 <meta name="description" content="Hamacas Lizaraso (hamacasperu.com) — Fabricantes de hamacas andinas de algodón, sujetadores de 150kg y 300kg, soportes de metal e instalación a domicilio en Lima.">
 <meta name="theme-color" content="#144222">
@@ -15,7 +15,6 @@
 <meta property="og:type" content="website">
 <style>
 :root{
-  /* Paleta oficial hamacasperu.com */
   --verde-oscuro:#144222;
   --verde-principal:#1E6F37;
   --verde-medio:#2D8A48;
@@ -68,16 +67,16 @@ body{font-family:'Fredoka',sans-serif;background:var(--fondo-suave);color:var(--
 }
 .wa-float:hover .wa-float-tooltip{opacity:1}
 
-/* HEADER */
+/* HEADER CON LOGO OFICIAL */
 header{
-  background:var(--blanco);padding:14px 40px;
+  background:var(--blanco);padding:12px 40px;
   display:flex;flex-direction:column;align-items:stretch;
   position:sticky;top:0;z-index:100;box-shadow:0 2px 14px rgba(0,0,0,.06);border-bottom:1px solid var(--arena-borde);
 }
 .header-top{display:flex;align-items:center;justify-content:space-between}
-.logo{text-decoration:none;display:flex;align-items:center;gap:12px;color:var(--verde-oscuro)}
-.logo-icon{font-size:1.8rem;line-height:1}
-.logo-text{display:flex;flex-direction:column}
+.logo{text-decoration:none;display:flex;align-items:center;gap:14px}
+.logo img{height:52px;width:auto;object-fit:contain;display:block}
+.logo-fallback{display:flex;flex-direction:column}
 .logo-title{font-size:1.35rem;font-weight:700;color:var(--verde-oscuro);letter-spacing:.02em;line-height:1.1}
 .logo-title span{color:var(--naranja-acento)}
 .logo-sub{font-size:.65rem;color:var(--texto-muted);letter-spacing:.18em;text-transform:uppercase}
@@ -89,49 +88,37 @@ header{
 /* HERO */
 .hero{
   background:linear-gradient(135deg,var(--verde-oscuro) 0%,#0E2E18 100%);
-  padding:50px 40px 46px;position:relative;overflow:hidden;
-  display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;
+  padding:44px 40px 42px;position:relative;overflow:hidden;
+  display:grid;grid-template-columns:1.2fr 0.8fr;gap:32px;align-items:center;
 }
 .hero::after{
   content:'';position:absolute;right:-60px;top:-60px;width:450px;height:450px;
-  border-radius:50%;background:radial-gradient(circle,rgba(30,111,55,.3) 0%,transparent 70%);
+  border-radius:50%;background:radial-gradient(circle,rgba(30,111,55,.35) 0%,transparent 70%);
   pointer-events:none;
 }
 .hero-left{position:relative;z-index:1}
-.hero-eyebrow{font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--dorado-acento);margin-bottom:12px;font-weight:600}
-.hero-title{font-size:clamp(1.9rem,3.6vw,3.2rem);font-weight:600;color:#fff;line-height:1.15;margin-bottom:14px}
+.hero-eyebrow{font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--dorado-acento);margin-bottom:10px;font-weight:600}
+.hero-title{font-size:clamp(1.9rem,3.6vw,3.2rem);font-weight:600;color:#fff;line-height:1.15;margin-bottom:12px}
 .hero-title em{font-style:italic;color:var(--dorado-acento)}
-.hero-desc{font-size:.9rem;color:rgba(255,255,255,.88);line-height:1.6;max-width:520px}
-.hero-stats{display:flex;gap:28px;margin-top:22px}
-.stat-num{font-size:1.6rem;color:var(--dorado-acento);font-weight:700}
+.hero-desc{font-size:.9rem;color:rgba(255,255,255,.88);line-height:1.6;max-width:560px}
+.hero-stats{display:flex;gap:28px;margin-top:20px}
+.stat-num{font-size:1.55rem;color:var(--dorado-acento);font-weight:700}
 .stat-label{font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.75)}
 .hero-right{position:relative;z-index:1;display:flex;align-items:center;justify-content:center}
-
-/* CATEGORÍAS */
-.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;width:100%;max-width:480px}
-.cat-tile{
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:6px;padding:14px 10px;
-  background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.15);
-  cursor:pointer;transition:all .2s ease;
-  font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;
-  color:#fff;text-align:center;border-radius:8px;
+.hero-badge-card{
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);
+  border-radius:12px;padding:24px 28px;text-align:center;backdrop-filter:blur(6px);
 }
-.cat-tile:hover{background:rgba(255,255,255,.14);border-color:var(--dorado-acento);transform:translateY(-2px)}
-.cat-tile.active{
-  background:var(--naranja-acento);border-color:var(--naranja-acento);
-  color:#fff;font-weight:600;box-shadow:0 4px 16px rgba(230,101,30,.4);
-}
-.cat-tile-icon{font-size:1.3rem;line-height:1}
-.cat-tile.tile-todos{grid-column:span 3;flex-direction:row;gap:10px;padding:12px 16px;font-size:.7rem}
+.hero-badge-card img{height:80px;width:auto;margin-bottom:12px;filter:drop-shadow(0 4px 12px rgba(0,0,0,.3))}
+.hero-badge-card p{color:#fff;font-size:.82rem;letter-spacing:.05em}
 
-/* BARRA DE FILTROS */
+/* BARRA DE FILTROS (SIN CATEGORÍAS) */
 .filter-bar{
-  background:var(--blanco);padding:12px 40px;border-bottom:1px solid var(--arena-borde);
+  background:var(--blanco);padding:14px 40px;border-bottom:1px solid var(--arena-borde);
   display:flex;align-items:center;gap:12px;flex-wrap:wrap;
 }
 .filter-row2{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.search-wrap{display:flex;flex:1;min-width:200px;max-width:420px;border:1.5px solid var(--arena-borde);border-radius:6px;overflow:hidden}
+.search-wrap{display:flex;flex:1;min-width:220px;max-width:460px;border:1.5px solid var(--arena-borde);border-radius:6px;overflow:hidden}
 .search-icon{background:var(--verde-claro);padding:12px 14px;display:flex;align-items:center}
 .search-icon svg{width:16px;height:16px;stroke:var(--verde-principal);fill:none;stroke-width:2}
 input[type=text]{
@@ -243,7 +230,7 @@ input[type=text]{
 .spec-l{font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--texto-muted);margin-bottom:3px}
 .spec-v{font-size:.85rem;font-weight:600;color:var(--texto-oscuro)}
 
-/* SECCIÓN ENVÍO E INSTALACIÓN */
+/* ENVÍO E INSTALACIÓN */
 .m-ship-section{border:1.5px solid var(--arena-borde);border-radius:8px;margin-bottom:18px;overflow:hidden}
 .m-ship-toggle{
   width:100%;display:flex;align-items:center;justify-content:space-between;
@@ -289,7 +276,7 @@ input[type=text]{
 }
 .map-actions a:hover{background:var(--naranja-hover);transform:translateY(-2px)}
 
-/* TESTIMONIOS Y BENEFICIOS */
+/* BENEFICIOS */
 .trust-section{background:var(--verde-claro);padding:44px 40px;border-top:1px solid var(--arena-borde);border-bottom:1px solid var(--arena-borde)}
 .trust-title{font-size:1.15rem;font-weight:600;color:var(--verde-oscuro);text-align:center;margin-bottom:28px;letter-spacing:.1em;text-transform:uppercase}
 .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:900px;margin:0 auto}
@@ -299,6 +286,7 @@ input[type=text]{
 .trust-sub{font-size:.72rem;color:var(--texto-muted);line-height:1.4}
 
 footer{background:#0C2413;padding:44px 40px 30px;text-align:center;color:rgba(255,255,255,.65);border-top:3px solid var(--naranja-acento)}
+footer img{height:50px;width:auto;margin-bottom:12px}
 footer a{color:var(--dorado-acento);text-decoration:none}
 footer a:hover{color:#fff}
 .ftcopy{display:block;margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.08);font-size:.65rem;letter-spacing:.15em;text-transform:uppercase}
@@ -328,8 +316,6 @@ footer a:hover{color:#fff}
   .modal{grid-template-columns:1fr}
   header,.filter-bar{padding:12px 16px}
   .grid{grid-template-columns:1fr}
-  .cat-grid{grid-template-columns:repeat(2,1fr)}
-  .cat-tile.tile-todos{grid-column:span 2}
   .filter-bar{flex-direction:column;align-items:stretch}
   .search-wrap{max-width:100%}
   .filter-row2{width:100%}
@@ -370,7 +356,7 @@ footer a:hover{color:#fff}
   <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
 </button>
 
-<!-- WHATSAPP FLOTANTE (+51 977 819 131) -->
+<!-- BOTÓN WHATSAPP -->
 <a class="wa-float" href="https://wa.me/51977819131?text=Hola%20Hamacas%20Lizaraso!%20%F0%9F%91%8B%20Vi%20su%20cat%C3%A1logo%20web%20y%20quisiera%20consultar%20por%20sus%20modelos%20disponibles." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
   <div class="wa-float-tooltip">¡Escríbenos al WhatsApp!</div>
@@ -384,9 +370,12 @@ footer a:hover{color:#fff}
 
 <header>
   <div class="header-top">
+    <!-- LOGO OFICIAL DE HAMACAS LIZARASO -->
     <a href="#" class="logo" id="logo" aria-label="Hamacas Lizaraso — Inicio">
-      <div class="logo-icon">🌿</div>
-      <div class="logo-text">
+      <img src="https://hamacasperu.com/wp-content/uploads/2025/08/cropped-cropped-logo-hamacas-lizaraso-principal.png"
+           alt="Hamacas Lizaraso Logo"
+           onerror="this.style.display='none';document.getElementById('logoFallback').style.display='flex'">
+      <div id="logoFallback" class="logo-fallback" style="display:none">
         <div class="logo-title">HAMACAS <span>LIZARASO</span></div>
         <div class="logo-sub">hamacasperu.com</div>
       </div>
@@ -411,13 +400,21 @@ footer a:hover{color:#fff}
         <div class="stat-num">Hasta 300 kg</div>
         <div class="stat-label">Fijación Certificada</div>
       </div>
+      <div class="stat-item">
+        <div class="stat-num">Lima &amp; Provincias</div>
+        <div class="stat-label">Envíos Rápidos</div>
+      </div>
     </div>
   </div>
   <div class="hero-right">
-    <nav class="cat-grid" id="catBar" role="tablist" aria-label="Categorías"></nav>
+    <div class="hero-badge-card">
+      <img src="https://hamacasperu.com/wp-content/uploads/2025/08/cropped-cropped-logo-hamacas-lizaraso-principal.png" alt="Logo Hamacas Lizaraso" onerror="this.style.display='none'">
+      <p><strong>Fabricantes Oficiales</strong><br>Algodón 100% Peruano &amp; Acero Reforzado</p>
+    </div>
   </div>
 </section>
 
+<!-- BARRA DE BÚSQUEDA Y VISTA -->
 <div class="filter-bar" role="search" aria-label="Filtros de búsqueda">
   <div class="search-wrap">
     <div class="search-icon" aria-hidden="true">
@@ -485,27 +482,27 @@ footer a:hover{color:#fff}
             <select class="ship-select" id="shipDistrict" onchange="evalDistrict()">
               <option value="">— Selecciona tu distrito —</option>
               <optgroup label="Lima Central / Miraflores">
-                <option value="cerca|Miraflores|10-14">Miraflores (Zona local / Tienda)</option>
-                <option value="cerca|San Isidro|10-15">San Isidro</option>
-                <option value="cerca|Surquillo|10-14">Surquillo</option>
-                <option value="cerca|Barranco|10-15">Barranco</option>
-                <option value="cerca|San Borja|12-16">San Borja</option>
-                <option value="cerca|Santiago de Surco|14-20">Santiago de Surco</option>
-                <option value="cerca|Jesús María|12-16">Jesús María</option>
-                <option value="cerca|Lince|12-16">Lince</option>
-                <option value="cerca|Magdalena del Mar|12-16">Magdalena del Mar</option>
-                <option value="cerca|Pueblo Libre|12-16">Pueblo Libre</option>
-                <option value="cerca|San Miguel|14-18">San Miguel</option>
-                <option value="cerca|La Molina|16-24">La Molina</option>
-                <option value="cerca|Chorrillos|15-22">Chorrillos</option>
+                <option value="Miraflores|10-14">Miraflores (Zona local / Tienda)</option>
+                <option value="San Isidro|10-15">San Isidro</option>
+                <option value="Surquillo|10-14">Surquillo</option>
+                <option value="Barranco|10-15">Barranco</option>
+                <option value="San Borja|12-16">San Borja</option>
+                <option value="Santiago de Surco|14-20">Santiago de Surco</option>
+                <option value="Jesús María|12-16">Jesús María</option>
+                <option value="Lince|12-16">Lince</option>
+                <option value="Magdalena del Mar|12-16">Magdalena del Mar</option>
+                <option value="Pueblo Libre|12-16">Pueblo Libre</option>
+                <option value="San Miguel|14-18">San Miguel</option>
+                <option value="La Molina|16-24">La Molina</option>
+                <option value="Chorrillos|15-22">Chorrillos</option>
               </optgroup>
               <optgroup label="Lima Norte, Sur y Este">
-                <option value="lejos|Los Olivos|25-35">Los Olivos</option>
-                <option value="lejos|San Martín de Porres|25-35">San Martín de Porres</option>
-                <option value="lejos|San Juan de Lurigancho|26-36">San Juan de Lurigancho</option>
-                <option value="lejos|Villa El Salvador|25-35">Villa El Salvador</option>
-                <option value="lejos|Ate Vitarte|22-30">Ate Vitarte</option>
-                <option value="lejos|Comas|30-40">Comas</option>
+                <option value="Los Olivos|25-35">Los Olivos</option>
+                <option value="San Martín de Porres|25-35">San Martín de Porres</option>
+                <option value="San Juan de Lurigancho|26-36">San Juan de Lurigancho</option>
+                <option value="Villa El Salvador|25-35">Villa El Salvador</option>
+                <option value="Ate Vitarte|22-30">Ate Vitarte</option>
+                <option value="Comas|30-40">Comas</option>
               </optgroup>
             </select>
             <div class="ship-result" id="shipResult" style="display:none"></div>
@@ -555,7 +552,6 @@ footer a:hover{color:#fff}
   <div class="map-title">📍 Ubicación oficial en Google Maps</div>
   <div class="map-subtitle">Hamacas Lizaraso - (Solo Recojo de Pedidos) · Miraflores, Lima</div>
   <div class="map-wrap">
-    <!-- Iframe configurado directamente a Hamacas Lizaraso en Petit Thouars 5466 Miraflores -->
     <iframe
       src="https://maps.google.com/maps?q=Hamacas+Lizaraso+-+(Solo+Recojo+de+Pedidos),+Av.+Petit+Thouars+5466,+Miraflores+15074&t=&z=16&ie=UTF8&iwloc=&output=embed"
       allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
@@ -570,7 +566,7 @@ footer a:hover{color:#fff}
 </section>
 
 <footer>
-  <p style="font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:6px">HAMACAS LIZARASO</p>
+  <img src="https://hamacasperu.com/wp-content/uploads/2025/08/cropped-cropped-logo-hamacas-lizaraso-principal.png" alt="Hamacas Lizaraso" onerror="this.style.display='none'">
   <p>Galería Cuzco Market, Av. Petit Thouars 5466, Miraflores, Lima, Perú</p>
   <p style="margin-top:6px">WhatsApp: <a href="https://wa.me/51977819131">+51 977 819 131</a> · Sitio Web: <a href="https://hamacasperu.com" target="_blank" rel="noopener noreferrer">hamacasperu.com</a></p>
   <span class="ftcopy">© 2026 Hamacas Lizaraso · Todos los derechos reservados</span>
@@ -580,12 +576,11 @@ footer a:hover{color:#fff}
 'use strict';
 const WA_NUMBER = '51977819131';
 
-// ── PRODUCTOS CONFORME A HAMACAS LIZARASO (hamacasperu.com) ───────────────────
+// ── PRODUCTOS HAMACAS LIZARASO ───────────────────────────────────────────────
 const productos = [
   {
     code: 'HA-150',
     name: 'Hamaca Andina Plaza y Media',
-    cat: 'Hamacas Andinas',
     price: 135,
     priceOld: 160,
     medidas: '3.00 m largo total × 1.40 m ancho',
@@ -598,7 +593,6 @@ const productos = [
   {
     code: 'SJ-150',
     name: 'Sujetador de Pared 150 Kilos',
-    cat: 'Sujetadores',
     price: 65,
     medidas: 'Set de 2 puntos de fijación completos',
     resistencia: '150 kg certificados',
@@ -610,7 +604,6 @@ const productos = [
   {
     code: 'SJ-300',
     name: 'Sujetador Reforzado 300 Kilos',
-    cat: 'Sujetadores',
     price: 95,
     priceOld: 115,
     medidas: 'Set de 2 puntos industriales de alta carga',
@@ -623,7 +616,6 @@ const productos = [
   {
     code: 'SP-BASE',
     name: 'Soporte o Base para Hamaca',
-    cat: 'Soportes',
     price: 350,
     priceOld: 400,
     medidas: '3.10 m largo × 1.00 m ancho base × 1.15 m alto',
@@ -636,7 +628,6 @@ const productos = [
   {
     code: 'SRV-INST',
     name: 'Servicio de Instalación en Lima',
-    cat: 'Instalación',
     price: 75,
     medidas: 'A domicilio en distritos de Lima Metropolitana',
     resistencia: 'Garantía de fijación y tensado perfecto',
@@ -648,7 +639,6 @@ const productos = [
   {
     code: 'PROM-02',
     name: 'Promoción 2: Hamaca Andina + Sujetadores',
-    cat: 'Ofertas',
     price: 180,
     priceOld: 225,
     medidas: 'Hamaca 1.5 Plazas + Juego completo de sujetadores',
@@ -661,7 +651,6 @@ const productos = [
   {
     code: 'PROM-03',
     name: 'Promoción 3: Hamaca Andina + Soporte de Metal',
-    cat: 'Ofertas',
     price: 450,
     priceOld: 535,
     medidas: 'Base portátil + Hamaca Andina completa',
@@ -672,15 +661,6 @@ const productos = [
     img: 'https://hamacasperu.com/wp-content/uploads/2022/02/soporte-hamaca.png'
   }
 ];
-
-const catIcons = {
-  Todos: '🏠',
-  Ofertas: '🔥',
-  'Hamacas Andinas': '🛋️',
-  Sujetadores: '⚓',
-  Soportes: '🏗️',
-  Instalación: '🛠️'
-};
 
 const WA_SVG = `<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>`;
 
@@ -695,7 +675,6 @@ const DOM = {
   btnGrid: document.getElementById('btnGrid'),
   btnList: document.getElementById('btnList'),
   btnLimpiar: document.getElementById('btnLimpiar'),
-  catBar: document.getElementById('catBar'),
   logo: document.getElementById('logo'),
   overlay: document.getElementById('overlay'),
   closeBtn: document.getElementById('modalCloseBtn'),
@@ -718,8 +697,7 @@ const DOM = {
   shipProv: document.getElementById('shipPanelProvincia')
 };
 
-let busqueda = '', categoriaActiva = 'Todos', sortDir = null, viewMode = 'grid';
-const categorias = ['Todos', 'Ofertas', 'Hamacas Andinas', 'Sujetadores', 'Soportes', 'Instalación'];
+let busqueda = '', sortDir = null, viewMode = 'grid';
 
 function esc(s){
   return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
@@ -729,28 +707,6 @@ function showToast() {
   DOM.toast.classList.add('show');
   setTimeout(() => DOM.toast.classList.remove('show'), 2400);
 }
-
-function buildCatBar() {
-  DOM.catBar.innerHTML = categorias.map(c => `
-    <button class="cat-tile${c === 'Todos' ? ' tile-todos' : ''}${c === categoriaActiva ? ' active' : ''}"
-      data-cat="${esc(c)}">
-      <span class="cat-tile-icon">${catIcons[c] || '📦'}</span>
-      ${esc(c)}
-    </button>`).join('');
-}
-
-function updateCatBar() {
-  const tiles = DOM.catBar.querySelectorAll('.cat-tile');
-  for (const t of tiles) t.classList.toggle('active', t.dataset.cat === categoriaActiva);
-}
-
-DOM.catBar.addEventListener('click', e => {
-  const tile = e.target.closest('.cat-tile');
-  if (!tile) return;
-  categoriaActiva = tile.dataset.cat;
-  updateCatBar();
-  render(getFiltered());
-});
 
 function applySortUI() {
   DOM.sortBtn.classList.toggle('active', sortDir !== null);
@@ -770,9 +726,7 @@ DOM.btnList.addEventListener('click', () => setView('list'));
 DOM.btnLimpiar.addEventListener('click', () => {
   DOM.searchInput.value = '';
   busqueda = '';
-  categoriaActiva = 'Todos';
   sortDir = null;
-  updateCatBar();
   applySortUI();
   render(getFiltered());
 });
@@ -787,12 +741,7 @@ function setView(m) {
 function getFiltered() {
   const q = busqueda.toLowerCase().trim();
   let list = productos.filter(p => {
-    if (categoriaActiva === 'Ofertas') {
-      if (!p.priceOld && p.cat !== 'Ofertas') return false;
-    } else if (categoriaActiva !== 'Todos' && p.cat !== categoriaActiva) {
-      return false;
-    }
-    if (q && !p.code.toLowerCase().includes(q) && !p.name.toLowerCase().includes(q) && !p.cat.toLowerCase().includes(q)) return false;
+    if (q && !p.code.toLowerCase().includes(q) && !p.name.toLowerCase().includes(q)) return false;
     return true;
   });
   if (sortDir === 'asc') list.sort((a,b) => a.price - b.price);
@@ -818,7 +767,7 @@ function render(list) {
           <div class="card-img"><span>${p.emoji}</span></div>
           <div class="card-body">
             <div>
-              <div class="card-code">${esc(p.code)} · ${esc(p.cat)}</div>
+              <div class="card-code">${esc(p.code)}</div>
               <div class="card-name">${esc(p.name)}</div>
               <div class="card-resistencia">⚖️ ${esc(p.resistencia)}</div>
             </div>
@@ -843,7 +792,7 @@ function render(list) {
             </div>
           </div>
           <div class="card-body">
-            <div class="card-code">${esc(p.code)} · ${esc(p.cat)}</div>
+            <div class="card-code">${esc(p.code)}</div>
             <div class="card-name">${esc(p.name)}</div>
             <div class="card-resistencia">⚖️ ${esc(p.resistencia)}</div>
             <div class="card-footer">
@@ -872,9 +821,8 @@ function openModal(idx) {
 
   DOM.mSpecs.innerHTML = `
     <div class="spec"><div class="spec-l">Código</div><div class="spec-v">${esc(p.code)}</div></div>
-    <div class="spec"><div class="spec-l">Categoría</div><div class="spec-v">${esc(p.cat)}</div></div>
-    <div class="spec"><div class="spec-l">Medidas / Presentación</div><div class="spec-v">${esc(p.medidas)}</div></div>
     <div class="spec"><div class="spec-l">Capacidad de Carga</div><div class="spec-v">${esc(p.resistencia)}</div></div>
+    <div class="spec" style="grid-column:span 2"><div class="spec-l">Medidas / Presentación</div><div class="spec-v">${esc(p.medidas)}</div></div>
     <div class="spec" style="grid-column:span 2"><div class="spec-l">Material / Composición</div><div class="spec-v">${esc(p.material)}</div></div>
     ${p.colores && p.colores.length ? `<div class="spec" style="grid-column:span 2"><div class="spec-l">Variantes / Colores</div><div class="spec-v">${esc(p.colores.join(', '))}</div></div>` : ''}
   `;
@@ -887,7 +835,7 @@ function openModal(idx) {
   DOM.mWA.onclick = () => {
     showToast();
     const msg = encodeURIComponent(
-      `Hola Hamacas Lizaraso! 👋 Vi en su web oficial (hamacasperu.com) el producto:\n\n` +
+      `Hola Hamacas Lizaraso! 👋 Vi en su catálogo (hamacasperu.com) el producto:\n\n` +
       `🌿 *${p.name}* (Código: ${p.code})\n` +
       `💰 Precio: S/ ${p.price}\n\n` +
       `¿Tienen stock disponible para coordinar recojo o envío a mi distrito? Muchas gracias!`
@@ -926,7 +874,7 @@ function switchShipTab(t) {
 function evalDistrict() {
   const val = DOM.shipDistrict.value;
   if (!val) { DOM.shipResult.style.display = 'none'; return; }
-  const [tipo, nombre, costo] = val.split('|');
+  const [nombre, costo] = val.split('|');
   DOM.shipResult.className = 'ship-result';
   DOM.shipResult.innerHTML = `
     <div style="font-weight:700;font-size:.85rem;color:var(--verde-oscuro);margin-bottom:6px">
@@ -951,7 +899,6 @@ window.addEventListener('scroll', () => {
 DOM.backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
 DOM.totalProd.textContent = productos.length;
-buildCatBar();
 render(getFiltered());
 </script>
 </body>
