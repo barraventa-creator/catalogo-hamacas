@@ -6,320 +6,291 @@
 <title>Hamacas Lizaraso — Catálogo Oficial 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
-<meta name="description" content="Hamacas Lizaraso (hamacasperu.com) — Fabricantes de hamacas andinas de algodón, sujetadores de 150kg y 300kg, soportes de metal e instalación a domicilio en Lima.">
-<meta name="theme-color" content="#144222">
-<meta property="og:title" content="Hamacas Lizaraso — hamacasperu.com">
-<meta property="og:description" content="Hamacas andinas artesanales, sujetadores certificados, soportes y servicio de instalación en Lima.">
-<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>">
+<meta name="description" content="Catálogo oficial de Hamacas Lizaraso (hamacasperu.com) — Hamacas andinas en 7 colores, sujetadores de 150kg/300kg, soportes de metal e instalación a domicilio.">
+<meta name="theme-color" content="#1A1A1A">
 <style>
 :root{
-  --verde-oscuro:#144222;
-  --verde-principal:#1E6F37;
-  --verde-medio:#2D8A48;
-  --verde-claro:#EAF5ED;
-  --naranja-acento:#E6651E;
-  --naranja-hover:#D05512;
-  --dorado-acento:#F59E0B;
+  /* Colores oficiales extraídos del logo de Hamacas Lizaraso */
+  --amarillo:#FFB100;
+  --amarillo-dark:#E59E00;
+  --amarillo-claro:#FFF7E5;
+  --negro:#1A1A1A;
+  --carbon:#2D2D2D;
   --blanco:#FFFFFF;
-  --fondo-suave:#F8FAF8;
-  --arena-borde:#DCE6DE;
-  --texto-oscuro:#18261C;
-  --texto-muted:#5E7063;
-  --trans-fast:.15s ease;--trans-med:.25s ease;
-  --shadow-card:0 10px 30px rgba(20,66,34,.08);
+  --fondo:#FAF8F5;
+  --borde:#EADFD0;
+  --texto:#222222;
+  --texto-muted:#6E6860;
+  --verde-wa:#25D366;
+  --trans-fast:.15s ease;
+  --shadow-card:0 8px 24px rgba(0,0,0,.06);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Fredoka',sans-serif;background:var(--fondo-suave);color:var(--texto-oscuro);min-height:100vh;overflow-x:hidden}
+body{font-family:'Fredoka',sans-serif;background:var(--fondo);color:var(--texto);min-height:100vh;overflow-x:hidden}
 
-.skip-link{position:absolute;top:-100%;left:16px;z-index:9999;padding:12px 20px;background:var(--naranja-acento);color:#fff;font-size:.85rem;text-decoration:none;transition:top var(--trans-fast)}
+.skip-link{position:absolute;top:-100%;left:16px;z-index:9999;padding:12px 20px;background:var(--amarillo);color:var(--negro);font-size:.85rem;text-decoration:none;font-weight:700}
 .skip-link:focus{top:8px}
 
-.topbar{background:var(--verde-oscuro);padding:8px 40px;text-align:center;font-size:.72rem;letter-spacing:.2em;color:#fff;text-transform:uppercase}
+.topbar{background:var(--negro);padding:9px 24px;text-align:center;font-size:.74rem;letter-spacing:.18em;color:#fff;text-transform:uppercase}
+.topbar span{color:var(--amarillo);font-weight:700}
 
 .shipping-bar{
-  background:var(--verde-principal);padding:11px 20px;text-align:center;
-  font-size:.88rem;letter-spacing:.05em;color:#fff;
-  display:flex;align-items:center;justify-content:center;gap:10px;
-  position:relative;z-index:99;
+  background:var(--amarillo);padding:10px 20px;text-align:center;
+  font-size:.88rem;color:var(--negro);display:flex;align-items:center;justify-content:center;gap:8px;
 }
-.shipping-bar strong{font-weight:700;font-size:.95rem}
+.shipping-bar strong{font-weight:700}
 
 /* BOTÓN FLOTANTE WHATSAPP */
 .wa-float{
   position:fixed;bottom:28px;right:28px;z-index:500;
-  width:58px;height:58px;border-radius:50%;background:#25D366;
+  width:58px;height:58px;border-radius:50%;background:var(--verde-wa);
   display:flex;align-items:center;justify-content:center;
-  box-shadow:0 6px 24px rgba(37,211,102,.5);text-decoration:none;transition:all .2s ease;
+  box-shadow:0 6px 24px rgba(37,211,102,.5);text-decoration:none;transition:transform .2s ease;
 }
-.wa-float:hover{transform:scale(1.06);box-shadow:0 8px 30px rgba(37,211,102,.7)}
+.wa-float:hover{transform:scale(1.08)}
 .wa-float svg{width:32px;height:32px;fill:#fff}
 .wa-float-tooltip{
   position:absolute;right:68px;bottom:50%;transform:translateY(50%);
-  background:var(--verde-oscuro);color:#fff;font-size:.75rem;letter-spacing:.08em;
-  padding:8px 14px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s;border-radius:4px;
+  background:var(--negro);color:#fff;font-size:.75rem;padding:7px 12px;white-space:nowrap;
+  opacity:0;pointer-events:none;transition:opacity .2s;border-radius:4px;
 }
 .wa-float-tooltip::after{
   content:'';position:absolute;right:-6px;top:50%;transform:translateY(-50%);
-  border:6px solid transparent;border-left-color:var(--verde-oscuro);border-right:none;
+  border:6px solid transparent;border-left-color:var(--negro);border-right:none;
 }
 .wa-float:hover .wa-float-tooltip{opacity:1}
 
 /* HEADER CON LOGO OFICIAL */
 header{
-  background:var(--blanco);padding:12px 40px;
-  display:flex;flex-direction:column;align-items:stretch;
-  position:sticky;top:0;z-index:100;box-shadow:0 2px 14px rgba(0,0,0,.06);border-bottom:1px solid var(--arena-borde);
+  background:var(--blanco);padding:14px 40px;position:sticky;top:0;z-index:100;
+  box-shadow:0 2px 14px rgba(0,0,0,.05);border-bottom:2px solid var(--borde);
 }
-.header-top{display:flex;align-items:center;justify-content:space-between}
-.logo{text-decoration:none;display:flex;align-items:center;gap:14px}
-.logo img{height:52px;width:auto;object-fit:contain;display:block}
-.logo-fallback{display:flex;flex-direction:column}
-.logo-title{font-size:1.35rem;font-weight:700;color:var(--verde-oscuro);letter-spacing:.02em;line-height:1.1}
-.logo-title span{color:var(--naranja-acento)}
-.logo-sub{font-size:.65rem;color:var(--texto-muted);letter-spacing:.18em;text-transform:uppercase}
-.header-right{
-  display:flex;align-items:center;gap:8px;font-size:.75rem;font-weight:600;
-  color:var(--verde-principal);background:var(--verde-claro);padding:6px 14px;border-radius:20px;
+.header-top{display:flex;align-items:center;justify-content:space-between;max-width:1300px;margin:0 auto}
+
+.brand-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-emblem{display:flex;align-items:center;justify-content:center;height:48px}
+.logo-emblem svg{height:46px;width:auto}
+.logo-text{display:flex;flex-direction:column;line-height:1}
+.logo-name-black{font-size:1.45rem;font-weight:700;color:var(--negro);letter-spacing:-.01em}
+.logo-name-yellow{font-size:1.45rem;font-weight:700;color:var(--amarillo);margin-top:-2px}
+
+.header-badge{
+  font-size:.75rem;font-weight:600;color:var(--negro);
+  background:var(--amarillo-claro);padding:8px 16px;border-radius:20px;border:1.5px solid var(--amarillo);
 }
 
-/* HERO */
+/* HERO PRESENTACIÓN */
 .hero{
-  background:linear-gradient(135deg,var(--verde-oscuro) 0%,#0E2E18 100%);
-  padding:44px 40px 42px;position:relative;overflow:hidden;
-  display:grid;grid-template-columns:1.2fr 0.8fr;gap:32px;align-items:center;
+  background:linear-gradient(135deg,var(--negro) 0%,var(--carbon) 100%);
+  padding:44px 40px 40px;color:#fff;position:relative;overflow:hidden;
 }
 .hero::after{
-  content:'';position:absolute;right:-60px;top:-60px;width:450px;height:450px;
-  border-radius:50%;background:radial-gradient(circle,rgba(30,111,55,.35) 0%,transparent 70%);
-  pointer-events:none;
+  content:'';position:absolute;right:-50px;top:-50px;width:380px;height:380px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,177,0,.22) 0%,transparent 70%);pointer-events:none;
 }
-.hero-left{position:relative;z-index:1}
-.hero-eyebrow{font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--dorado-acento);margin-bottom:10px;font-weight:600}
-.hero-title{font-size:clamp(1.9rem,3.6vw,3.2rem);font-weight:600;color:#fff;line-height:1.15;margin-bottom:12px}
-.hero-title em{font-style:italic;color:var(--dorado-acento)}
-.hero-desc{font-size:.9rem;color:rgba(255,255,255,.88);line-height:1.6;max-width:560px}
-.hero-stats{display:flex;gap:28px;margin-top:20px}
-.stat-num{font-size:1.55rem;color:var(--dorado-acento);font-weight:700}
-.stat-label{font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.75)}
-.hero-right{position:relative;z-index:1;display:flex;align-items:center;justify-content:center}
-.hero-badge-card{
-  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);
-  border-radius:12px;padding:24px 28px;text-align:center;backdrop-filter:blur(6px);
-}
-.hero-badge-card img{height:80px;width:auto;margin-bottom:12px;filter:drop-shadow(0 4px 12px rgba(0,0,0,.3))}
-.hero-badge-card p{color:#fff;font-size:.82rem;letter-spacing:.05em}
+.hero-content{max-width:1220px;margin:0 auto;display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
+.hero-eyebrow{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--amarillo);font-weight:700;margin-bottom:10px}
+.hero-title{font-size:clamp(1.9rem,3.4vw,3.1rem);font-weight:700;line-height:1.15;margin-bottom:12px}
+.hero-title span{color:var(--amarillo)}
+.hero-desc{font-size:.92rem;color:rgba(255,255,255,.9);line-height:1.6;max-width:540px}
+.hero-stats{display:flex;gap:28px;margin-top:22px}
+.stat-num{font-size:1.6rem;color:var(--amarillo);font-weight:700}
+.stat-label{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75)}
 
-/* BARRA DE FILTROS (SIN CATEGORÍAS) */
-.filter-bar{
-  background:var(--blanco);padding:14px 40px;border-bottom:1px solid var(--arena-borde);
-  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+.hero-right{display:flex;justify-content:center}
+.hero-card{
+  background:rgba(255,255,255,.08);border:1.5px solid rgba(255,177,0,.35);
+  border-radius:14px;padding:22px 28px;text-align:center;backdrop-filter:blur(6px);max-width:340px;
 }
-.filter-row2{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.search-wrap{display:flex;flex:1;min-width:220px;max-width:460px;border:1.5px solid var(--arena-borde);border-radius:6px;overflow:hidden}
-.search-icon{background:var(--verde-claro);padding:12px 14px;display:flex;align-items:center}
-.search-icon svg{width:16px;height:16px;stroke:var(--verde-principal);fill:none;stroke-width:2}
-input[type=text]{
-  flex:1;padding:12px 14px;border:none;background:#fff;
-  font-family:'Fredoka',sans-serif;font-size:.9rem;color:var(--texto-oscuro);outline:none;
-}
-.sort-wrap{display:flex;align-items:center;gap:6px}
-.sort-btn{
-  padding:10px 14px;background:transparent;border:1.5px solid var(--arena-borde);
-  font-family:'Fredoka',sans-serif;font-size:.72rem;letter-spacing:.1em;
-  text-transform:uppercase;color:var(--texto-oscuro);cursor:pointer;
-  transition:all .2s;white-space:nowrap;display:flex;align-items:center;gap:6px;border-radius:6px;
-}
-.sort-btn:hover,.sort-btn.active{border-color:var(--verde-principal);color:var(--verde-principal);background:var(--verde-claro)}
-.sort-btn svg{width:12px;height:12px;fill:currentColor}
-.view-toggle{display:flex;border:1.5px solid var(--arena-borde);border-radius:6px;overflow:hidden}
-.view-btn{padding:9px 12px;background:transparent;border:none;cursor:pointer;color:var(--texto-muted);transition:all .2s;display:flex;align-items:center}
-.view-btn.active{background:var(--verde-principal);color:#fff}
-.view-btn svg{width:14px;height:14px;fill:currentColor}
-.btn-limpiar{
-  padding:11px 18px;background:transparent;border:1.5px solid var(--arena-borde);
-  font-family:'Fredoka',sans-serif;font-size:.72rem;letter-spacing:.1em;
-  text-transform:uppercase;color:var(--texto-muted);cursor:pointer;transition:all .2s;border-radius:6px;
-}
-.btn-limpiar:hover{border-color:var(--naranja-acento);color:var(--naranja-acento)}
-.results-info{font-size:.75rem;color:var(--texto-muted);margin-left:auto}
-.results-info b{color:var(--verde-principal)}
+.hero-card-icon{font-size:2.8rem;margin-bottom:8px}
+.hero-card-title{font-size:1.05rem;font-weight:700;color:var(--amarillo);margin-bottom:6px}
+.hero-card-desc{font-size:.78rem;color:rgba(255,255,255,.85);line-height:1.5}
 
-/* GRILLA DE PRODUCTOS */
+/* CATÁLOGO DIRECTO (SIN BARRA DE FILTROS) */
+.catalog-header{max-width:1220px;margin:32px auto 0;padding:0 40px;display:flex;align-items:center;justify-content:space-between}
+.catalog-title{font-size:1.45rem;font-weight:700;color:var(--negro)}
+.catalog-count{font-size:.8rem;color:var(--texto-muted);background:var(--blanco);padding:6px 14px;border-radius:20px;border:1px solid var(--borde)}
+
 .grid{
   display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));
-  gap:20px;padding:32px 40px;min-height:260px;max-width:1300px;margin:0 auto;
+  gap:22px;padding:20px 40px 50px;max-width:1300px;margin:0 auto;
 }
-.grid.list-mode{grid-template-columns:1fr;gap:12px;padding:24px 40px}
 
 .card{
-  background:var(--blanco);border:1px solid var(--arena-borde);
-  border-radius:10px;cursor:pointer;transition:all .2s ease;
-  position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.03);
+  background:var(--blanco);border:1.5px solid var(--borde);
+  border-radius:12px;cursor:pointer;transition:all .2s ease;
+  position:relative;overflow:hidden;box-shadow:var(--shadow-card);display:flex;flex-direction:column;
 }
-.card:hover{box-shadow:var(--shadow-card);transform:translateY(-3px);border-color:var(--verde-principal)}
+.card:hover{transform:translateY(-4px);border-color:var(--amarillo);box-shadow:0 14px 34px rgba(255,177,0,.18)}
 
 .card-img{
-  width:100%;aspect-ratio:1.1;background:var(--verde-claro);
+  width:100%;aspect-ratio:1.15;background:var(--amarillo-claro);
   display:flex;align-items:center;justify-content:center;
   font-size:4.5rem;position:relative;overflow:hidden;
 }
 .card-img img{width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity .25s ease}
 .card-img img.loaded{opacity:1}
+
+.badge-oferta{
+  position:absolute;top:10px;right:10px;z-index:10;
+  background:var(--amarillo);color:var(--negro);font-size:.65rem;
+  font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:4px;
+}
+
 .card-hover-overlay{
-  position:absolute;inset:0;background:linear-gradient(to top,rgba(20,66,34,.88) 0%,rgba(20,66,34,.2) 60%,transparent 100%);
+  position:absolute;inset:0;background:linear-gradient(to top,rgba(26,26,26,.88) 0%,rgba(26,26,26,.15) 60%,transparent 100%);
   opacity:0;transition:opacity .2s ease;display:flex;align-items:flex-end;justify-content:center;padding:16px;
 }
 .card:hover .card-hover-overlay{opacity:1}
 .card-hover-label{
-  font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;
-  color:#fff;background:var(--naranja-acento);padding:8px 16px;border-radius:4px;
-  font-weight:600;display:flex;align-items:center;gap:6px;box-shadow:0 4px 12px rgba(0,0,0,.2);
+  font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--negro);background:var(--amarillo);padding:8px 16px;border-radius:4px;
+  font-weight:700;display:flex;align-items:center;gap:6px;
 }
 
-.card-body{padding:18px 20px 22px}
-.card-code{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--verde-medio);font-weight:700;margin-bottom:6px}
-.card-name{font-size:1.2rem;color:var(--texto-oscuro);line-height:1.25;margin-bottom:6px;font-weight:600}
-.card-resistencia{font-size:.72rem;color:var(--texto-muted);margin-bottom:12px;display:flex;align-items:center;gap:6px}
-.card-footer{display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid var(--arena-borde)}
-.card-price{font-size:1.45rem;font-weight:700;color:var(--verde-oscuro)}
+.card-body{padding:18px 20px 20px;flex:1;display:flex;flex-direction:column}
+.card-code{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--amarillo-dark);font-weight:700;margin-bottom:4px}
+.card-name{font-size:1.2rem;color:var(--negro);line-height:1.25;margin-bottom:6px;font-weight:700}
+.card-resistencia{font-size:.72rem;color:var(--texto-muted);margin-bottom:12px}
+
+/* Pastillas de colores en la tarjeta */
+.card-colors{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:14px}
+.color-pill-mini{font-size:.6rem;padding:2px 7px;border-radius:12px;background:var(--fondo);border:1px solid var(--borde);color:var(--texto)}
+
+.card-footer{display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid var(--borde);margin-top:auto}
+.card-price{font-size:1.45rem;font-weight:700;color:var(--negro)}
 .card-price small{font-size:.82rem;font-weight:400;color:var(--texto-muted)}
 
-.badge-tag{
-  position:absolute;top:10px;right:10px;z-index:10;
-  background:var(--naranja-acento);color:#fff;font-size:.62rem;
-  font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:4px;
-}
-
-/* Vista lista */
-.card.list-card{display:flex;flex-direction:row}
-.card.list-card .card-img{width:120px;height:120px;aspect-ratio:unset;flex-shrink:0;font-size:2.5rem}
-.card.list-card .card-body{flex:1;display:flex;align-items:center;gap:24px;padding:16px 24px}
-.card.list-card .card-footer{border-top:none;padding-top:0;margin-left:auto}
-
-.empty{text-align:center;padding:80px 20px;display:none}
-.empty h3{font-size:1.5rem;color:var(--texto-oscuro);margin-bottom:8px}
-
 /* MODAL */
-.overlay{display:none;position:fixed;inset:0;background:rgba(14,46,24,.82);backdrop-filter:blur(4px);z-index:200;align-items:center;justify-content:center;padding:16px}
+.overlay{display:none;position:fixed;inset:0;background:rgba(26,26,26,.82);backdrop-filter:blur(4px);z-index:200;align-items:center;justify-content:center;padding:16px}
 .overlay.open{display:flex}
-.modal{background:#fff;width:100%;max-width:960px;max-height:92vh;border-radius:12px;overflow-y:auto;display:grid;grid-template-columns:1fr 1.1fr;box-shadow:0 20px 60px rgba(0,0,0,.3)}
-.modal-media{background:var(--verde-claro);display:flex;flex-direction:column;position:relative}
+.modal{background:#fff;width:100%;max-width:960px;max-height:92vh;border-radius:14px;overflow-y:auto;display:grid;grid-template-columns:1fr 1.1fr;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.modal-media{background:var(--amarillo-claro);display:flex;flex-direction:column;position:relative}
 .modal-close{
   position:absolute;top:14px;right:14px;z-index:10;
-  background:var(--naranja-acento);border:none;color:#fff;font-size:1.4rem;font-weight:700;
+  background:var(--negro);border:none;color:#fff;font-size:1.4rem;font-weight:700;
   width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;
-  box-shadow:0 4px 12px rgba(230,101,30,.3);transition:all .15s ease;
+  transition:all .15s ease;
 }
-.modal-close:hover{background:var(--naranja-hover);transform:scale(1.05)}
+.modal-close:hover{background:var(--amarillo);color:var(--negro)}
 
 #imgArea{width:100%;flex:1;min-height:380px;position:relative;display:flex;align-items:center;justify-content:center}
 #mImg{position:absolute;inset:20px;width:calc(100% - 40px);height:calc(100% - 40px);object-fit:contain;opacity:0;transition:opacity .2s}
 #mImg.loaded{opacity:1}
-#mEmojiLarge{font-size:6.5rem;opacity:.35}
+#mEmojiLarge{font-size:6.5rem;opacity:.3}
 
 .modal-info{padding:32px 28px;display:flex;flex-direction:column;overflow-y:auto}
-.m-name{font-size:1.8rem;font-weight:600;color:var(--verde-oscuro);line-height:1.2;margin-bottom:6px}
-.m-divider{height:1px;background:var(--arena-borde);margin:14px 0}
-.m-price{font-size:2.3rem;font-weight:700;color:var(--naranja-acento)}
-.m-price-note{font-size:.72rem;color:var(--texto-muted);margin-top:2px;margin-bottom:18px}
-.m-specs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:18px}
-.spec{padding:10px 12px;background:var(--fondo-suave);border:1px solid var(--arena-borde);border-radius:6px}
+.m-name{font-size:1.75rem;font-weight:700;color:var(--negro);line-height:1.2;margin-bottom:6px}
+.m-divider{height:1px;background:var(--borde);margin:14px 0}
+.m-price{font-size:2.2rem;font-weight:700;color:var(--negro)}
+.m-price-note{font-size:.72rem;color:var(--texto-muted);margin-top:2px;margin-bottom:16px}
+
+/* SELECTOR DE COLORES EN MODAL */
+.m-color-selector{background:var(--amarillo-claro);border:1.5px solid var(--amarillo);border-radius:8px;padding:12px 14px;margin-bottom:16px}
+.m-color-title{font-size:.74rem;font-weight:700;color:var(--negro);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+.m-color-chips{display:flex;flex-wrap:wrap;gap:6px}
+.m-chip{
+  padding:6px 12px;font-size:.75rem;border-radius:20px;background:#fff;border:1.5px solid var(--borde);
+  cursor:pointer;font-weight:600;color:var(--texto);transition:all .15s ease;
+}
+.m-chip:hover{border-color:var(--amarillo);background:#fff9ed}
+.m-chip.active{background:var(--negro);color:var(--amarillo);border-color:var(--negro)}
+
+.m-specs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
+.spec{padding:10px 12px;background:var(--fondo);border:1px solid var(--borde);border-radius:6px}
 .spec-l{font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--texto-muted);margin-bottom:3px}
-.spec-v{font-size:.85rem;font-weight:600;color:var(--texto-oscuro)}
+.spec-v{font-size:.85rem;font-weight:600;color:var(--texto)}
 
 /* ENVÍO E INSTALACIÓN */
-.m-ship-section{border:1.5px solid var(--arena-borde);border-radius:8px;margin-bottom:18px;overflow:hidden}
+.m-ship-section{border:1.5px solid var(--borde);border-radius:8px;margin-bottom:18px;overflow:hidden}
 .m-ship-toggle{
   width:100%;display:flex;align-items:center;justify-content:space-between;
-  padding:12px 16px;background:var(--verde-claro);border:none;cursor:pointer;
-  font-family:'Fredoka',sans-serif;font-size:.82rem;font-weight:600;color:var(--verde-oscuro);
+  padding:12px 16px;background:var(--fondo);border:none;cursor:pointer;
+  font-family:'Fredoka',sans-serif;font-size:.82rem;font-weight:600;color:var(--negro);
 }
 .m-ship-arrow{transition:transform .25s ease}
 .m-ship-toggle[aria-expanded="true"] .m-ship-arrow{transform:rotate(180deg)}
 .m-ship-body{max-height:0;overflow:hidden;transition:max-height .35s ease;background:#fff}
 .m-ship-body.open{max-height:1200px;overflow:auto}
-.ship-tab-bar{display:flex;border-bottom:1px solid var(--arena-borde)}
+.ship-tab-bar{display:flex;border-bottom:1px solid var(--borde)}
 .ship-tab{
   flex:1;padding:10px;background:transparent;border:none;font-family:'Fredoka',sans-serif;
   font-size:.75rem;font-weight:600;color:var(--texto-muted);cursor:pointer;border-bottom:2px solid transparent;
 }
-.ship-tab.active{color:var(--verde-principal);border-bottom-color:var(--verde-principal)}
+.ship-tab.active{color:var(--negro);border-bottom-color:var(--amarillo);font-weight:700}
 .ship-tab-content{padding:14px 16px}
 .ship-select{
-  width:100%;padding:10px 12px;border:1.5px solid var(--arena-borde);border-radius:6px;
+  width:100%;padding:10px 12px;border:1.5px solid var(--borde);border-radius:6px;
   font-family:'Fredoka',sans-serif;font-size:.85rem;margin-bottom:10px;outline:none;
 }
-.ship-result{padding:12px 14px;border:1.5px solid var(--verde-medio);background:var(--verde-claro);border-radius:6px}
+.ship-result{padding:12px 14px;border:1.5px solid var(--amarillo);background:var(--amarillo-claro);border-radius:6px}
 
 .btn-wa{
-  width:100%;padding:16px;background:#25D366;color:#fff;border:none;border-radius:8px;
-  font-family:'Fredoka',sans-serif;font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;font-weight:600;
+  width:100%;padding:16px;background:var(--verde-wa);color:#fff;border:none;border-radius:8px;
+  font-family:'Fredoka',sans-serif;font-size:.86rem;letter-spacing:.15em;text-transform:uppercase;font-weight:700;
   cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;
-  transition:background .15s ease;margin-top:auto;box-shadow:0 4px 16px rgba(37,211,102,.3);
+  transition:all .15s ease;margin-top:auto;box-shadow:0 4px 16px rgba(37,211,102,.3);
 }
-.btn-wa:hover{background:#1eb855}
+.btn-wa:hover{background:#1eb855;transform:translateY(-1px)}
 
 /* MAPA GOOGLE MAPS */
-.map-section{background:var(--verde-oscuro);padding:50px 40px;color:#fff}
-.map-title{font-size:1.6rem;font-weight:600;text-align:center;margin-bottom:6px}
-.map-subtitle{font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;color:var(--dorado-acento);text-align:center;margin-bottom:24px}
-.map-wrap{max-width:900px;margin:0 auto;border-radius:10px;overflow:hidden;border:3px solid rgba(255,255,255,.15);box-shadow:0 12px 36px rgba(0,0,0,.3)}
+.map-section{background:var(--negro);padding:50px 40px;color:#fff}
+.map-title{font-size:1.6rem;font-weight:700;text-align:center;margin-bottom:6px}
+.map-subtitle{font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;color:var(--amarillo);text-align:center;margin-bottom:24px}
+.map-wrap{max-width:900px;margin:0 auto;border-radius:10px;overflow:hidden;border:3px solid rgba(255,177,0,.4);box-shadow:0 12px 36px rgba(0,0,0,.4)}
 .map-wrap iframe{width:100%;height:380px;border:none;display:block}
 .map-actions{margin-top:16px;text-align:center}
 .map-actions a{
-  display:inline-flex;align-items:center;gap:8px;padding:12px 22px;background:var(--naranja-acento);
-  color:#fff;text-decoration:none;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;
-  font-weight:600;border-radius:6px;transition:all .2s ease;box-shadow:0 4px 14px rgba(230,101,30,.4);
+  display:inline-flex;align-items:center;gap:8px;padding:12px 22px;background:var(--amarillo);
+  color:var(--negro);text-decoration:none;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;
+  font-weight:700;border-radius:6px;transition:all .2s ease;
 }
-.map-actions a:hover{background:var(--naranja-hover);transform:translateY(-2px)}
+.map-actions a:hover{background:#fff;transform:translateY(-2px)}
 
-/* BENEFICIOS */
-.trust-section{background:var(--verde-claro);padding:44px 40px;border-top:1px solid var(--arena-borde);border-bottom:1px solid var(--arena-borde)}
-.trust-title{font-size:1.15rem;font-weight:600;color:var(--verde-oscuro);text-align:center;margin-bottom:28px;letter-spacing:.1em;text-transform:uppercase}
+/* TESTIMONIOS Y BENEFICIOS */
+.trust-section{background:var(--blanco);padding:44px 40px;border-top:1px solid var(--borde);border-bottom:1px solid var(--borde)}
+.trust-title{font-size:1.15rem;font-weight:700;color:var(--negro);text-align:center;margin-bottom:26px;letter-spacing:.1em;text-transform:uppercase}
 .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:900px;margin:0 auto}
-.trust-item{background:#fff;padding:24px 18px;border-radius:8px;border:1px solid var(--arena-borde);text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.02)}
+.trust-item{background:var(--fondo);padding:24px 18px;border-radius:8px;border:1.5px solid var(--borde);text-align:center}
 .trust-icon{font-size:2.2rem;margin-bottom:8px}
-.trust-label{font-size:1.05rem;font-weight:600;color:var(--verde-oscuro);margin-bottom:4px}
+.trust-label{font-size:1.05rem;font-weight:700;color:var(--negro);margin-bottom:4px}
 .trust-sub{font-size:.72rem;color:var(--texto-muted);line-height:1.4}
 
-footer{background:#0C2413;padding:44px 40px 30px;text-align:center;color:rgba(255,255,255,.65);border-top:3px solid var(--naranja-acento)}
-footer img{height:50px;width:auto;margin-bottom:12px}
-footer a{color:var(--dorado-acento);text-decoration:none}
+footer{background:#111111;padding:44px 40px 30px;text-align:center;color:rgba(255,255,255,.7);border-top:4px solid var(--amarillo)}
+footer a{color:var(--amarillo);text-decoration:none}
 footer a:hover{color:#fff}
-.ftcopy{display:block;margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.08);font-size:.65rem;letter-spacing:.15em;text-transform:uppercase}
+.ftcopy{display:block;margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.1);font-size:.65rem;letter-spacing:.15em;text-transform:uppercase}
 
 .back-to-top{
   position:fixed;bottom:98px;right:32px;z-index:600;width:44px;height:44px;border-radius:50%;
-  background:var(--verde-oscuro);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;
-  opacity:0;transform:translateY(16px);pointer-events:none;transition:all var(--trans-med);
+  background:var(--negro);color:var(--amarillo);border:2px solid var(--amarillo);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(16px);pointer-events:none;transition:all var(--trans-fast);
 }
 .back-to-top.visible{opacity:1;transform:translateY(0);pointer-events:auto}
 .back-to-top svg{width:18px;height:18px;fill:currentColor}
 
 .toast{
   position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(20px);
-  background:var(--verde-oscuro);color:#fff;padding:12px 22px;font-size:.8rem;border-radius:6px;
+  background:var(--negro);color:#fff;padding:12px 22px;font-size:.8rem;border-radius:6px;
   display:flex;align-items:center;gap:10px;box-shadow:0 8px 32px rgba(0,0,0,.3);z-index:9999;
-  opacity:0;pointer-events:none;transition:all var(--trans-med);border-left:4px solid #25D366;
+  opacity:0;pointer-events:none;transition:all .25s ease;border-left:4px solid var(--verde-wa);
 }
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
-@media(max-width:900px){
-  .hero{grid-template-columns:1fr;gap:26px;padding:36px 20px}
-  .grid{grid-template-columns:repeat(2,1fr);padding:20px 16px}
+@media(max-width:850px){
+  .hero-content{grid-template-columns:1fr;gap:26px}
+  .grid{grid-template-columns:repeat(2,1fr);padding:20px 20px 40px}
   .trust-grid{grid-template-columns:1fr}
+  .catalog-header{padding:0 20px}
 }
-@media(max-width:640px){
+@media(max-width:600px){
   .modal{grid-template-columns:1fr}
-  header,.filter-bar{padding:12px 16px}
+  header{padding:12px 20px}
   .grid{grid-template-columns:1fr}
-  .filter-bar{flex-direction:column;align-items:stretch}
-  .search-wrap{max-width:100%}
-  .filter-row2{width:100%}
-  .sort-btn,.btn-limpiar{flex:1;justify-content:center}
+  .hero{padding:30px 20px}
 }
 </style>
 <script type="application/ld+json">
@@ -336,20 +307,20 @@ footer a:hover{color:#fff}
     "addressCountry":"PE"
   },
   "url":"https://hamacasperu.com",
-  "priceRange":"S/ 65 - S/ 380",
-  "description":"Fabricante oficial de hamacas andinas de algodón, sujetadores de pared 150kg/300kg, soportes e instalación a domicilio en Lima."
+  "priceRange":"S/ 65 - S/ 450",
+  "description":"Fabricante oficial de hamacas andinas de algodón en 7 colores, sujetadores de pared 150kg/300kg, soportes e instalación a domicilio en Lima."
 }
 </script>
 </head>
 <body>
 
-<noscript><div style="text-align:center;padding:40px;color:#1E6F37">Por favor activa JavaScript para ver el catálogo de Hamacas Lizaraso.</div></noscript>
+<noscript><div style="text-align:center;padding:40px;color:#FFB100">Por favor activa JavaScript para ver el catálogo de Hamacas Lizaraso.</div></noscript>
 
 <a href="#grid" class="skip-link">Ir al catálogo</a>
 
 <!-- TOAST -->
 <div class="toast" id="toast" role="alert" aria-live="polite">
-  🌿 Abriendo el WhatsApp oficial de Hamacas Lizaraso…
+  ☀️ Abriendo el WhatsApp oficial de Hamacas Lizaraso…
 </div>
 
 <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
@@ -366,96 +337,89 @@ footer a:hover{color:#fff}
   <span>🚚 <strong>Envíos a todo el Perú</strong> · Servicio de instalación en Lima desde <strong>S/ 75</strong></span>
 </div>
 
-<div class="topbar">🌿 Hecho en Perú · Fabricantes Oficiales · hamacasperu.com</div>
+<div class="topbar">🇵🇪 Fabricantes Peruanos · <span>hamacasperu.com</span> · Lima, Perú</div>
 
 <header>
   <div class="header-top">
-    <!-- LOGO OFICIAL DE HAMACAS LIZARASO -->
-    <a href="#" class="logo" id="logo" aria-label="Hamacas Lizaraso — Inicio">
-      <img src="https://hamacasperu.com/wp-content/uploads/2025/08/cropped-cropped-logo-hamacas-lizaraso-principal.png"
-           alt="Hamacas Lizaraso Logo"
-           onerror="this.style.display='none';document.getElementById('logoFallback').style.display='flex'">
-      <div id="logoFallback" class="logo-fallback" style="display:none">
-        <div class="logo-title">HAMACAS <span>LIZARASO</span></div>
-        <div class="logo-sub">hamacasperu.com</div>
+    <!-- LOGO OFICIAL VECTORIZADO SEGÚN IMAGEN -->
+    <a href="#" class="brand-logo" id="logo" aria-label="Hamacas Lizaraso — Inicio">
+      <div class="logo-emblem">
+        <svg viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Sol amarillo -->
+          <circle cx="58" cy="50" r="32" fill="#FFB100"/>
+          <!-- Palmera Izquierda -->
+          <path d="M22 62C24 45 32 35 44 28" stroke="#1A1A1A" stroke-width="4.5" stroke-linecap="round"/>
+          <path d="M42 27C34 22 24 23 16 28C22 23 30 18 43 27Z" fill="#1A1A1A"/>
+          <path d="M44 26C42 16 35 10 24 8C33 12 40 18 45 28Z" fill="#1A1A1A"/>
+          <path d="M46 27C52 18 58 13 68 11C60 16 54 20 45 28Z" fill="#1A1A1A"/>
+          <!-- Palmera Derecha -->
+          <path d="M78 62C76 42 66 30 52 20" stroke="#1A1A1A" stroke-width="5" stroke-linecap="round"/>
+          <path d="M52 19C60 14 70 14 80 18C72 14 62 11 50 19Z" fill="#1A1A1A"/>
+          <path d="M50 18C52 9 60 4 72 2C62 5 55 10 49 19Z" fill="#1A1A1A"/>
+          <path d="M49 19C42 11 34 8 22 8C32 11 40 14 50 20Z" fill="#1A1A1A"/>
+          <!-- Hamaca entre las palmeras -->
+          <path d="M30 46Q52 64 72 44" stroke="#1A1A1A" stroke-width="6" stroke-linecap="round"/>
+          <path d="M30 46Q52 64 72 44" stroke="#FFB100" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name-black">Hamacas</span>
+        <span class="logo-name-yellow">Lizaraso</span>
       </div>
     </a>
     <div class="header-right">
-      <span>⭐ 4.9 en Google Maps</span>
+      <div class="header-badge">⭐ 4.9 Calificación Google</div>
     </div>
   </div>
 </header>
 
 <section class="hero" aria-label="Presentación">
-  <div class="hero-left">
-    <div class="hero-eyebrow">Algodón Andino &amp; Confort Total</div>
-    <h1 class="hero-title">Relájate en una hamaca<br><em>de pura calidad.</em></h1>
-    <p class="hero-desc">Más de 10 años llevando descanso y tradición peruana a hogares de todo el país. Modelos andinos, sujetadores seguros y soportes portátiles.</p>
-    <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-num" id="totalProd">0</div>
-        <div class="stat-label">Modelos y Kits</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">Hasta 300 kg</div>
-        <div class="stat-label">Fijación Certificada</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">Lima &amp; Provincias</div>
-        <div class="stat-label">Envíos Rápidos</div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-eyebrow">100% Algodón Peruano &amp; Alta Resistencia</div>
+      <h1 class="hero-title">El verdadero descanso<br>con <span>Hamacas Lizaraso</span></h1>
+      <p class="hero-desc">Fabricamos las tradicionales hamacas andinas de algodón peruano en 7 colores vivos, sujetadores probados de hasta 300 kg y bases metálicas para disfrutar en cualquier lugar.</p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">7 Colores</div>
+          <div class="stat-label">Hamaca Andina</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">150 y 300 kg</div>
+          <div class="stat-label">Sujetadores</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">Desde S/ 75</div>
+          <div class="stat-label">Instalación Lima</div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="hero-right">
-    <div class="hero-badge-card">
-      <img src="https://hamacasperu.com/wp-content/uploads/2025/08/cropped-cropped-logo-hamacas-lizaraso-principal.png" alt="Logo Hamacas Lizaraso" onerror="this.style.display='none'">
-      <p><strong>Fabricantes Oficiales</strong><br>Algodón 100% Peruano &amp; Acero Reforzado</p>
+    <div class="hero-right">
+      <div class="hero-card">
+        <div class="hero-card-icon">☀️</div>
+        <div class="hero-card-title">Hamacas Lizaraso</div>
+        <div class="hero-card-desc">Garantía directa de fabricante. Envíos diarios a todo el Perú y entregas en Miraflores.</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- BARRA DE BÚSQUEDA Y VISTA -->
-<div class="filter-bar" role="search" aria-label="Filtros de búsqueda">
-  <div class="search-wrap">
-    <div class="search-icon" aria-hidden="true">
-      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-    </div>
-    <input type="text" id="searchInput" placeholder="Buscar por nombre, código o palabra clave..." aria-label="Buscar productos">
-  </div>
-  <div class="filter-row2">
-    <div class="sort-wrap">
-      <button class="sort-btn" id="sortBtn" aria-label="Ordenar por precio">
-        <span id="sortLabel">Precio</span>
-        <svg id="sortIcon" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7-7 7 7"/></svg>
-      </button>
-    </div>
-    <div class="view-toggle" role="radiogroup" aria-label="Vista">
-      <button class="view-btn active" id="btnGrid" role="radio" aria-checked="true" aria-label="Vista cuadrícula">
-        <svg viewBox="0 0 16 16"><rect x="1" y="1" width="6" height="6"/><rect x="9" y="1" width="6" height="6"/><rect x="1" y="9" width="6" height="6"/><rect x="9" y="9" width="6" height="6"/></svg>
-      </button>
-      <button class="view-btn" id="btnList" role="radio" aria-checked="false" aria-label="Vista lista">
-        <svg viewBox="0 0 16 16"><rect x="1" y="2" width="14" height="3"/><rect x="1" y="7" width="14" height="3"/><rect x="1" y="12" width="14" height="3"/></svg>
-      </button>
-    </div>
-    <button class="btn-limpiar" id="btnLimpiar" aria-label="Limpiar filtros">Limpiar</button>
-    <div class="results-info" aria-live="polite">Mostrando <b id="countNum">0</b> opciones</div>
-  </div>
+<!-- ENCABEZADO DEL CATÁLOGO DIRECTO -->
+<div class="catalog-header">
+  <div class="catalog-title">Nuestros Modelos y Accesorios</div>
+  <div class="catalog-count">7 Opciones Disponibles</div>
 </div>
 
+<!-- GRILLA DIRECTA DE PRODUCTOS (SIN FILTROS) -->
 <main id="grid" class="grid" role="region" aria-label="Productos"></main>
-<div class="empty" id="empty" role="status">
-  <div style="font-size:2.5rem;margin-bottom:12px;opacity:.3" aria-hidden="true">🔍</div>
-  <h3>Sin resultados</h3>
-  <p>Prueba buscando "andina", "sujetador" o "soporte".</p>
-</div>
 
-<!-- MODAL DETALLE -->
+<!-- MODAL DETALLE DE PRODUCTO -->
 <div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-label="Detalle de producto">
   <div class="modal">
     <div class="modal-media">
       <button class="modal-close" id="modalCloseBtn" aria-label="Cerrar">×</button>
       <div id="imgArea">
-        <div id="mEmojiLarge">🌿</div>
+        <div id="mEmojiLarge">☀️</div>
         <img id="mImg" src="" alt="" loading="eager">
       </div>
     </div>
@@ -463,13 +427,20 @@ footer a:hover{color:#fff}
       <div class="m-name" id="mName"></div>
       <div class="m-divider"></div>
       <div class="m-price" id="mPrice"></div>
-      <div class="m-price-note">Precios en Soles (S/) · Garantía de Fábrica · hamacasperu.com</div>
+      <div class="m-price-note">Precio en Soles (S/) · Garantía Oficial Hamacas Lizaraso</div>
+
+      <!-- SELECTOR DE LOS 7 COLORES (SI APLICA) -->
+      <div class="m-color-selector" id="mColorBox" style="display:none">
+        <div class="m-color-title">🎨 Elige tu color preferido:</div>
+        <div class="m-color-chips" id="mColorChips"></div>
+      </div>
+
       <div class="m-specs" id="mSpecs"></div>
 
       <!-- SECCIÓN ENVÍO E INSTALACIÓN -->
       <div class="m-ship-section">
         <button class="m-ship-toggle" id="mShipToggle" aria-expanded="false" onclick="toggleShipSection()">
-          <span>📦 ¿Cómo lo recibo o instalo?</span>
+          <span>📦 ¿Cómo recibirlo o instalarlo en casa?</span>
           <svg class="m-ship-arrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="m-ship-body" id="mShipBody">
@@ -478,10 +449,10 @@ footer a:hover{color:#fff}
             <button class="ship-tab" id="shipTabBtn2" onclick="switchShipTab('provincia')">🌎 Provincias</button>
           </div>
           <div id="shipPanelLima" class="ship-tab-content">
-            <p style="font-size:.74rem;color:var(--texto-muted);margin-bottom:8px">Calcula tu delivery e instalación:</p>
+            <p style="font-size:.74rem;color:var(--texto-muted);margin-bottom:8px">Selecciona tu distrito:</p>
             <select class="ship-select" id="shipDistrict" onchange="evalDistrict()">
-              <option value="">— Selecciona tu distrito —</option>
-              <optgroup label="Lima Central / Miraflores">
+              <option value="">— Elige tu distrito —</option>
+              <optgroup label="Lima Central">
                 <option value="Miraflores|10-14">Miraflores (Zona local / Tienda)</option>
                 <option value="San Isidro|10-15">San Isidro</option>
                 <option value="Surquillo|10-14">Surquillo</option>
@@ -496,7 +467,7 @@ footer a:hover{color:#fff}
                 <option value="La Molina|16-24">La Molina</option>
                 <option value="Chorrillos|15-22">Chorrillos</option>
               </optgroup>
-              <optgroup label="Lima Norte, Sur y Este">
+              <optgroup label="Otros Distritos">
                 <option value="Los Olivos|25-35">Los Olivos</option>
                 <option value="San Martín de Porres|25-35">San Martín de Porres</option>
                 <option value="San Juan de Lurigancho|26-36">San Juan de Lurigancho</option>
@@ -508,10 +479,10 @@ footer a:hover{color:#fff}
             <div class="ship-result" id="shipResult" style="display:none"></div>
           </div>
           <div id="shipPanelProvincia" class="ship-tab-content" style="display:none">
-            <ul style="padding-left:18px;font-size:.78rem;line-height:1.6;color:var(--texto-oscuro)">
+            <ul style="padding-left:18px;font-size:.78rem;line-height:1.6;color:var(--texto)">
               <li><strong>Agencias Shalom / Marvisur:</strong> Pago de flete al recoger en tu agencia más cercana.</li>
               <li><strong>Olva Courier:</strong> Envío directo hasta la puerta de tu casa a nivel nacional.</li>
-              <li><strong>Embalaje seguro:</strong> Producto listo para proteger la tela y accesorios metálicos.</li>
+              <li><strong>Despachos diarios</strong> con número de seguimiento.</li>
             </ul>
           </div>
         </div>
@@ -519,7 +490,7 @@ footer a:hover{color:#fff}
 
       <button class="btn-wa" id="mWA">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-        Pedir o Consultar por WhatsApp
+        Consultar / Pedir por WhatsApp
       </button>
     </div>
   </div>
@@ -527,27 +498,27 @@ footer a:hover{color:#fff}
 
 <!-- VALORES DE MARCA -->
 <section class="trust-section" aria-label="Beneficios">
-  <div class="trust-title">¿Por qué elegir Hamacas Lizaraso?</div>
+  <div class="trust-title">Garantía Hamacas Lizaraso</div>
   <div class="trust-grid">
     <div class="trust-item">
       <div class="trust-icon">🧵</div>
-      <div class="trust-label">100% Algodón Peruano</div>
-      <div class="trust-sub">Diseño andino tradicional, suave, fresco y de fibra tupida.</div>
+      <div class="trust-label">7 Colores en Algodón</div>
+      <div class="trust-sub">Rasta, Negro, Verde, Multicolor, Azul, Rosado y Crema.</div>
     </div>
     <div class="trust-item">
       <div class="trust-icon">⚓</div>
-      <div class="trust-label">Carga Probada de 150 y 300 kg</div>
-      <div class="trust-sub">Sujetadores industriales para colgar tu hamaca con total seguridad.</div>
+      <div class="trust-label">Fijación de 150 y 300 kg</div>
+      <div class="trust-sub">Sujetadores certificados para máxima seguridad en pared.</div>
     </div>
     <div class="trust-item">
       <div class="trust-icon">🛠️</div>
-      <div class="trust-label">Instalación en Lima desde S/ 75</div>
-      <div class="trust-sub">Técnicos calificados que colocan y prueban la hamaca en tu casa.</div>
+      <div class="trust-label">Instalación desde S/ 75</div>
+      <div class="trust-sub">Servicio profesional a domicilio en Lima Metropolitana.</div>
     </div>
   </div>
 </section>
 
-<!-- UBICACIÓN EXACTA DE GOOGLE MAPS COMO HAMACAS LIZARASO -->
+<!-- UBICACIÓN GOOGLE MAPS -->
 <section class="map-section" aria-label="Ubicación oficial en Google Maps">
   <div class="map-title">📍 Ubicación oficial en Google Maps</div>
   <div class="map-subtitle">Hamacas Lizaraso - (Solo Recojo de Pedidos) · Miraflores, Lima</div>
@@ -560,21 +531,24 @@ footer a:hover{color:#fff}
   </div>
   <div class="map-actions">
     <a href="https://maps.google.com/?cid=6264969242940284453" target="_blank" rel="noopener noreferrer">
-      🗺️ Abrir ficha oficial en Google Maps
+      🗺️ Abrir ficha en Google Maps
     </a>
   </div>
 </section>
 
 <footer>
-  <img src="https://hamacasperu.com/wp-content/uploads/2025/08/cropped-cropped-logo-hamacas-lizaraso-principal.png" alt="Hamacas Lizaraso" onerror="this.style.display='none'">
+  <p style="font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:6px">HAMACAS LIZARASO</p>
   <p>Galería Cuzco Market, Av. Petit Thouars 5466, Miraflores, Lima, Perú</p>
-  <p style="margin-top:6px">WhatsApp: <a href="https://wa.me/51977819131">+51 977 819 131</a> · Sitio Web: <a href="https://hamacasperu.com" target="_blank" rel="noopener noreferrer">hamacasperu.com</a></p>
+  <p style="margin-top:8px">WhatsApp: <a href="https://wa.me/51977819131">+51 977 819 131</a> · Web: <a href="https://hamacasperu.com" target="_blank" rel="noopener noreferrer">hamacasperu.com</a></p>
   <span class="ftcopy">© 2026 Hamacas Lizaraso · Todos los derechos reservados</span>
 </footer>
 
 <script>
 'use strict';
 const WA_NUMBER = '51977819131';
+
+// ── LOS 7 COLORES EXACTOS DE LA HAMACA ANDINA SEGÚN FOTO ───────────────────────
+const COLORES_ANDINA = ['Rasta', 'Negro', 'Verde', 'Multicolor', 'Azul', 'Rosado', 'Crema'];
 
 // ── PRODUCTOS HAMACAS LIZARASO ───────────────────────────────────────────────
 const productos = [
@@ -585,9 +559,9 @@ const productos = [
     priceOld: 160,
     medidas: '3.00 m largo total × 1.40 m ancho',
     resistencia: 'Hasta 130 kg (1 a 2 personas)',
-    material: '100% Algodón Peruano trenzado de máxima durabilidad',
+    material: '100% Algodón Peruano trenzado artesanal',
     emoji: '🛋️',
-    colores: ['Rasta Multicolor', 'Color Crudo / Natural', 'Azul Andino', 'Verde Bosque', 'Naranja Sol'],
+    colores: COLORES_ANDINA,
     img: 'https://hamacasperu.com/wp-content/uploads/2024/05/RASTA-3.jpg'
   },
   {
@@ -596,7 +570,7 @@ const productos = [
     price: 65,
     medidas: 'Set de 2 puntos de fijación completos',
     resistencia: '150 kg certificados',
-    material: 'Pernos armella zincados + tarugos expansivos + sogas de nylon alta resistencia',
+    material: 'Pernos armella zincados + tarugos expansivos + sogas de nylon',
     emoji: '⚓',
     colores: ['Galvanizado / Dorado'],
     img: 'https://hamacasperu.com/wp-content/uploads/2021/04/sujetadores-300x300.png'
@@ -606,32 +580,32 @@ const productos = [
     name: 'Sujetador Reforzado 300 Kilos',
     price: 95,
     priceOld: 115,
-    medidas: 'Set de 2 puntos industriales de alta carga',
-    resistencia: '300 kg probados en pared de concreto o viga',
-    material: 'Acero estructural reforzado + mosquetones náuticos + soga trenzada',
+    medidas: 'Set de 2 puntos industriales de alta resistencia',
+    resistencia: '300 kg probados para pared de concreto o viga',
+    material: 'Acero estructural reforzado + mosquetones náuticos + sogas de alto impacto',
     emoji: '🔩',
     colores: ['Acero Inoxidable'],
     img: 'https://hamacasperu.com/wp-content/uploads/2021/04/sujetadores-300x300.png'
   },
   {
     code: 'SP-BASE',
-    name: 'Soporte o Base para Hamaca',
+    name: 'Soporte o Base para Hamaca (Metal)',
     price: 350,
     priceOld: 400,
-    medidas: '3.10 m largo × 1.00 m ancho base × 1.15 m alto',
+    medidas: '3.10 m largo × 1.00 m base × 1.15 m alto',
     resistencia: 'Hasta 180 kg',
-    material: 'Estructura tubular de metal desarmable con pintura al horno anticorrosiva',
+    material: 'Estructura tubular de acero desarmable con pintura anticorrosiva',
     emoji: '🏗️',
     colores: ['Negro Mate'],
     img: 'https://hamacasperu.com/wp-content/uploads/2020/11/soporte-1.png'
   },
   {
     code: 'SRV-INST',
-    name: 'Servicio de Instalación en Lima',
+    name: 'Servicio de Instalación a Domicilio',
     price: 75,
-    medidas: 'A domicilio en distritos de Lima Metropolitana',
-    resistencia: 'Garantía de fijación y tensado perfecto',
-    material: 'Instalación con taladro percutor en ladrillo, concreto o vigas',
+    medidas: 'A domicilio en distritos de Lima',
+    resistencia: 'Garantía de fijación y nivelación segura',
+    material: 'Perforación profesional con taladro percutor en ladrillo, concreto o vigas',
     emoji: '🛠️',
     colores: ['Servicio Técnico'],
     img: 'https://hamacasperu.com/wp-content/uploads/2021/07/47.jpg'
@@ -641,11 +615,11 @@ const productos = [
     name: 'Promoción 2: Hamaca Andina + Sujetadores',
     price: 180,
     priceOld: 225,
-    medidas: 'Hamaca 1.5 Plazas + Juego completo de sujetadores',
+    medidas: 'Hamaca 1.5 Plazas + Kit completo de 2 sujetadores',
     resistencia: 'Hasta 150 kg en pared',
-    material: 'Hamaca 100% algodón + ganchos y sogas listos para colgar',
+    material: 'Algodón peruano + ganchos y sogas listos para usar',
     emoji: '🎁',
-    colores: ['Rasta', 'Azul', 'Crudo'],
+    colores: COLORES_ANDINA,
     img: 'https://hamacasperu.com/wp-content/uploads/2025/01/Promocion-2.png'
   },
   {
@@ -653,11 +627,11 @@ const productos = [
     name: 'Promoción 3: Hamaca Andina + Soporte de Metal',
     price: 450,
     priceOld: 535,
-    medidas: 'Base portátil + Hamaca Andina completa',
-    resistencia: 'Hasta 180 kg (No requiere agujerear paredes)',
+    medidas: 'Base metálica portátil + Hamaca Andina completa',
+    resistencia: 'Hasta 180 kg (No requiere taladrar paredes)',
     material: 'Soporte de acero + Hamaca de algodón',
     emoji: '⭐',
-    colores: ['Soporte negro + hamaca a elección'],
+    colores: COLORES_ANDINA,
     img: 'https://hamacasperu.com/wp-content/uploads/2022/02/soporte-hamaca.png'
   }
 ];
@@ -666,27 +640,17 @@ const WA_SVG = `<svg width="18" height="18" viewBox="0 0 24 24" fill="currentCol
 
 const DOM = {
   grid: document.getElementById('grid'),
-  empty: document.getElementById('empty'),
-  countNum: document.getElementById('countNum'),
-  searchInput: document.getElementById('searchInput'),
-  sortBtn: document.getElementById('sortBtn'),
-  sortLabel: document.getElementById('sortLabel'),
-  sortIcon: document.getElementById('sortIcon'),
-  btnGrid: document.getElementById('btnGrid'),
-  btnList: document.getElementById('btnList'),
-  btnLimpiar: document.getElementById('btnLimpiar'),
-  logo: document.getElementById('logo'),
   overlay: document.getElementById('overlay'),
   closeBtn: document.getElementById('modalCloseBtn'),
   mName: document.getElementById('mName'),
   mPrice: document.getElementById('mPrice'),
   mSpecs: document.getElementById('mSpecs'),
+  mColorBox: document.getElementById('mColorBox'),
+  mColorChips: document.getElementById('mColorChips'),
   mWA: document.getElementById('mWA'),
   mImg: document.getElementById('mImg'),
-  mEmojiLarge: document.getElementById('mEmojiLarge'),
   toast: document.getElementById('toast'),
   backToTop: document.getElementById('backToTop'),
-  totalProd: document.getElementById('totalProd'),
   shipToggle: document.getElementById('mShipToggle'),
   shipBody: document.getElementById('mShipBody'),
   shipResult: document.getElementById('shipResult'),
@@ -697,7 +661,7 @@ const DOM = {
   shipProv: document.getElementById('shipPanelProvincia')
 };
 
-let busqueda = '', sortDir = null, viewMode = 'grid';
+let colorSeleccionado = '';
 
 function esc(s){
   return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
@@ -708,103 +672,37 @@ function showToast() {
   setTimeout(() => DOM.toast.classList.remove('show'), 2400);
 }
 
-function applySortUI() {
-  DOM.sortBtn.classList.toggle('active', sortDir !== null);
-  if (sortDir === 'asc') DOM.sortLabel.textContent = 'Menor precio';
-  else if (sortDir === 'desc') DOM.sortLabel.textContent = 'Mayor precio';
-  else DOM.sortLabel.textContent = 'Precio';
-}
+// RENDER DIRECTO DE LAS 7 OPCIONES
+function render() {
+  DOM.grid.innerHTML = productos.map((p, idx) => {
+    const colorChipsHtml = p.colores && p.colores.length > 1
+      ? `<div class="card-colors">` + p.colores.map(c => `<span class="color-pill-mini">${esc(c)}</span>`).join('') + `</div>`
+      : '';
 
-DOM.sortBtn.addEventListener('click', () => {
-  sortDir = !sortDir ? 'asc' : sortDir === 'asc' ? 'desc' : null;
-  applySortUI();
-  render(getFiltered());
-});
-
-DOM.btnGrid.addEventListener('click', () => setView('grid'));
-DOM.btnList.addEventListener('click', () => setView('list'));
-DOM.btnLimpiar.addEventListener('click', () => {
-  DOM.searchInput.value = '';
-  busqueda = '';
-  sortDir = null;
-  applySortUI();
-  render(getFiltered());
-});
-
-function setView(m) {
-  viewMode = m;
-  DOM.btnGrid.classList.toggle('active', m === 'grid');
-  DOM.btnList.classList.toggle('active', m === 'list');
-  render(getFiltered());
-}
-
-function getFiltered() {
-  const q = busqueda.toLowerCase().trim();
-  let list = productos.filter(p => {
-    if (q && !p.code.toLowerCase().includes(q) && !p.name.toLowerCase().includes(q)) return false;
-    return true;
-  });
-  if (sortDir === 'asc') list.sort((a,b) => a.price - b.price);
-  if (sortDir === 'desc') list.sort((a,b) => b.price - a.price);
-  return list;
-}
-
-function render(list) {
-  DOM.countNum.textContent = list.length;
-  if (!list.length) {
-    DOM.grid.innerHTML = '';
-    DOM.empty.style.display = 'block';
-    return;
-  }
-  DOM.empty.style.display = 'none';
-
-  if (viewMode === 'list') {
-    DOM.grid.className = 'grid list-mode';
-    DOM.grid.innerHTML = list.map(p => {
-      const pi = productos.indexOf(p);
-      return `
-        <div class="card list-card" data-idx="${pi}">
-          <div class="card-img"><span>${p.emoji}</span></div>
-          <div class="card-body">
-            <div>
-              <div class="card-code">${esc(p.code)}</div>
-              <div class="card-name">${esc(p.name)}</div>
-              <div class="card-resistencia">⚖️ ${esc(p.resistencia)}</div>
-            </div>
-            <div class="card-footer">
-              <div class="card-price"><small>S/ </small>${p.price}</div>
+    return `
+      <div class="card" data-idx="${idx}">
+        <div class="card-img">
+          ${p.priceOld ? `<div class="badge-oferta">Oferta -S/ ${p.priceOld - p.price}</div>` : ''}
+          <span>${p.emoji}</span>
+          <img src="${esc(p.img)}" alt="${esc(p.name)}" loading="lazy" onload="this.classList.add('loaded')" onerror="this.style.display='none'">
+          <div class="card-hover-overlay">
+            <div class="card-hover-label">${WA_SVG} Ver detalle</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-code">${esc(p.code)}</div>
+          <div class="card-name">${esc(p.name)}</div>
+          <div class="card-resistencia">⚖️ ${esc(p.resistencia)}</div>
+          ${colorChipsHtml}
+          <div class="card-footer">
+            <div class="card-price">
+              ${p.priceOld ? `<span style="display:block;font-size:.74rem;color:var(--texto-muted);text-decoration:line-through">S/ ${p.priceOld}</span>` : ''}
+              <small>S/ </small>${p.price}
             </div>
           </div>
-        </div>`;
-    }).join('');
-  } else {
-    DOM.grid.className = 'grid';
-    DOM.grid.innerHTML = list.map(p => {
-      const pi = productos.indexOf(p);
-      return `
-        <div class="card" data-idx="${pi}">
-          <div class="card-img">
-            ${p.priceOld ? `<div class="badge-tag">Ahorras S/ ${p.priceOld - p.price}</div>` : ''}
-            <span>${p.emoji}</span>
-            <img src="${esc(p.img)}" alt="${esc(p.name)}" loading="lazy" onload="this.classList.add('loaded')" onerror="this.style.display='none'">
-            <div class="card-hover-overlay">
-              <div class="card-hover-label">${WA_SVG} Ver detalle</div>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="card-code">${esc(p.code)}</div>
-            <div class="card-name">${esc(p.name)}</div>
-            <div class="card-resistencia">⚖️ ${esc(p.resistencia)}</div>
-            <div class="card-footer">
-              <div class="card-price">
-                ${p.priceOld ? `<span style="display:block;font-size:.75rem;color:var(--texto-muted);text-decoration:line-through">S/ ${p.priceOld}</span>` : ''}
-                <small>S/ </small>${p.price}
-              </div>
-            </div>
-          </div>
-        </div>`;
-    }).join('');
-  }
+        </div>
+      </div>`;
+  }).join('');
 }
 
 DOM.grid.addEventListener('click', e => {
@@ -819,12 +717,23 @@ function openModal(idx) {
     ? `<span style="font-size:1.1rem;color:var(--texto-muted);text-decoration:line-through">S/ ${p.priceOld}</span> S/ ${p.price}`
     : `<small style="font-size:1.1rem;font-weight:400;color:var(--texto-muted)">S/ </small>${p.price}`;
 
+  // Selector de colores interactivo
+  if (p.colores && p.colores.length > 1) {
+    colorSeleccionado = p.colores[0]; // por defecto el primero (Rasta)
+    DOM.mColorBox.style.display = 'block';
+    DOM.mColorChips.innerHTML = p.colores.map((c, i) => `
+      <button class="m-chip ${i === 0 ? 'active' : ''}" onclick="selectColor('${esc(c)}', this)">${esc(c)}</button>
+    `).join('');
+  } else {
+    colorSeleccionado = (p.colores && p.colores[0]) || '';
+    DOM.mColorBox.style.display = 'none';
+  }
+
   DOM.mSpecs.innerHTML = `
     <div class="spec"><div class="spec-l">Código</div><div class="spec-v">${esc(p.code)}</div></div>
-    <div class="spec"><div class="spec-l">Capacidad de Carga</div><div class="spec-v">${esc(p.resistencia)}</div></div>
+    <div class="spec"><div class="spec-l">Resistencia</div><div class="spec-v">${esc(p.resistencia)}</div></div>
     <div class="spec" style="grid-column:span 2"><div class="spec-l">Medidas / Presentación</div><div class="spec-v">${esc(p.medidas)}</div></div>
-    <div class="spec" style="grid-column:span 2"><div class="spec-l">Material / Composición</div><div class="spec-v">${esc(p.material)}</div></div>
-    ${p.colores && p.colores.length ? `<div class="spec" style="grid-column:span 2"><div class="spec-l">Variantes / Colores</div><div class="spec-v">${esc(p.colores.join(', '))}</div></div>` : ''}
+    <div class="spec" style="grid-column:span 2"><div class="spec-l">Material / Fabricación</div><div class="spec-v">${esc(p.material)}</div></div>
   `;
 
   DOM.mImg.classList.remove('loaded');
@@ -834,17 +743,25 @@ function openModal(idx) {
 
   DOM.mWA.onclick = () => {
     showToast();
+    const colorTexto = colorSeleccionado ? `\n🎨 Color seleccionado: *${colorSeleccionado}*` : '';
     const msg = encodeURIComponent(
       `Hola Hamacas Lizaraso! 👋 Vi en su catálogo (hamacasperu.com) el producto:\n\n` +
-      `🌿 *${p.name}* (Código: ${p.code})\n` +
-      `💰 Precio: S/ ${p.price}\n\n` +
-      `¿Tienen stock disponible para coordinar recojo o envío a mi distrito? Muchas gracias!`
+      `☀️ *${p.name}* (Código: ${p.code})\n` +
+      `💰 Precio: S/ ${p.price}${colorTexto}\n\n` +
+      `¿Tienen stock disponible para coordinar recojo en Miraflores o delivery? Gracias!`
     );
     window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, '_blank');
   };
 
   DOM.overlay.classList.add('open');
 }
+
+window.selectColor = function(color, btn) {
+  colorSeleccionado = color;
+  const chips = DOM.mColorChips.querySelectorAll('.m-chip');
+  chips.forEach(c => c.classList.remove('active'));
+  btn.classList.add('active');
+};
 
 function closeModal() {
   DOM.overlay.classList.remove('open');
@@ -877,29 +794,24 @@ function evalDistrict() {
   const [nombre, costo] = val.split('|');
   DOM.shipResult.className = 'ship-result';
   DOM.shipResult.innerHTML = `
-    <div style="font-weight:700;font-size:.85rem;color:var(--verde-oscuro);margin-bottom:6px">
+    <div style="font-weight:700;font-size:.85rem;color:var(--negro);margin-bottom:6px">
       🚚 Opciones para ${esc(nombre)}:
     </div>
-    <ul style="padding-left:16px;font-size:.75rem;line-height:1.5;color:var(--texto-oscuro)">
-      <li>Costo aproximado de delivery motorizado: <strong>S/ ${esc(costo)}</strong>.</li>
+    <ul style="padding-left:16px;font-size:.75rem;line-height:1.5;color:var(--texto)">
+      <li>Costo aproximado de delivery: <strong>S/ ${esc(costo)}</strong>.</li>
       <li>Servicio de instalación profesional disponible desde <strong>S/ 75</strong>.</li>
-      <li>Recojo directo en tienda sin costo de envío: <strong>Galería Cuzco Market, Av. Petit Thouars 5466, Miraflores</strong>.</li>
+      <li>Recojo directo sin costo de envío en: <strong>Galería Cuzco Market, Av. Petit Thouars 5466, Miraflores</strong>.</li>
     </ul>`;
   DOM.shipResult.style.display = 'block';
 }
-
-DOM.searchInput.addEventListener('input', function() {
-  busqueda = this.value;
-  render(getFiltered());
-});
 
 window.addEventListener('scroll', () => {
   DOM.backToTop.classList.toggle('visible', window.scrollY > 400);
 });
 DOM.backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-DOM.totalProd.textContent = productos.length;
-render(getFiltered());
+// Inicio
+render();
 </script>
 </body>
 </html>
