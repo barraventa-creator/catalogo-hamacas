@@ -7,25 +7,27 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>">
-<meta name="description" content="Catálogo oficial de Hamacas Lizaraso (hamacasperu.com) — Hamacas andinas en 7 colores, sujetadores de 150kg/300kg, soportes de metal e instalación a domicilio.">
-<meta name="theme-color" content="#1A1A1A">
+<link rel="icon" href="https://hamacasperu.com/wp-content/uploads/2025/08/cropped-cropped-logo-hamacas-lizaraso-principal.png">
+<meta name="description" content="Catálogo oficial de Hamacas Lizaraso (hamacasperu.com) — Hamacas andinas en 7 colores, sujetadores de 150kg y 300kg, soportes de metal e instalación a domicilio en Lima.">
+<meta name="theme-color" content="#181818">
 <style>
 :root{
-  /* Colores oficiales extraídos del logo de Hamacas Lizaraso */
   --amarillo:#FFB100;
   --amarillo-dark:#E59E00;
-  --amarillo-claro:#FFF7E5;
-  --negro:#1A1A1A;
-  --carbon:#2D2D2D;
+  --amarillo-bg:#FFF8E7;
+  --negro:#181818;
+  --carbon:#2A2A2A;
   --blanco:#FFFFFF;
-  --fondo:#FAF8F5;
-  --borde:#EADFD0;
+  --fondo:#F9F8F5;
+  --borde:#E8E2D8;
   --texto:#222222;
-  --texto-muted:#6E6860;
+  --texto-muted:#6B645C;
   --verde-wa:#25D366;
-  --trans-fast:.15s ease;
-  --shadow-card:0 8px 24px rgba(0,0,0,.06);
+  --verde-wa-dark:#1EAA52;
+  --shadow-sm:0 2px 8px rgba(0,0,0,.04);
+  --shadow-md:0 10px 28px rgba(0,0,0,.08);
+  --radius-lg:14px;
+  --radius-md:8px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -34,7 +36,7 @@ body{font-family:'Fredoka',sans-serif;background:var(--fondo);color:var(--texto)
 .skip-link{position:absolute;top:-100%;left:16px;z-index:9999;padding:12px 20px;background:var(--amarillo);color:var(--negro);font-size:.85rem;text-decoration:none;font-weight:700}
 .skip-link:focus{top:8px}
 
-.topbar{background:var(--negro);padding:9px 24px;text-align:center;font-size:.74rem;letter-spacing:.18em;color:#fff;text-transform:uppercase}
+.topbar{background:var(--negro);padding:8px 24px;text-align:center;font-size:.74rem;letter-spacing:.15em;color:#fff;text-transform:uppercase}
 .topbar span{color:var(--amarillo);font-weight:700}
 
 .shipping-bar{
@@ -45,7 +47,7 @@ body{font-family:'Fredoka',sans-serif;background:var(--fondo);color:var(--texto)
 
 /* BOTÓN FLOTANTE WHATSAPP */
 .wa-float{
-  position:fixed;bottom:28px;right:28px;z-index:500;
+  position:fixed;bottom:24px;right:24px;z-index:500;
   width:58px;height:58px;border-radius:50%;background:var(--verde-wa);
   display:flex;align-items:center;justify-content:center;
   box-shadow:0 6px 24px rgba(37,211,102,.5);text-decoration:none;transition:transform .2s ease;
@@ -65,110 +67,119 @@ body{font-family:'Fredoka',sans-serif;background:var(--fondo);color:var(--texto)
 
 /* HEADER CON LOGO OFICIAL */
 header{
-  background:var(--blanco);padding:14px 40px;position:sticky;top:0;z-index:100;
-  box-shadow:0 2px 14px rgba(0,0,0,.05);border-bottom:2px solid var(--borde);
+  background:var(--blanco);padding:12px 36px;position:sticky;top:0;z-index:100;
+  box-shadow:0 2px 12px rgba(0,0,0,.05);border-bottom:2px solid var(--borde);
 }
-.header-top{display:flex;align-items:center;justify-content:space-between;max-width:1300px;margin:0 auto}
+.header-top{display:flex;align-items:center;justify-content:space-between;max-width:1240px;margin:0 auto}
+.brand-logo{display:flex;align-items:center;text-decoration:none}
+.brand-logo img{height:48px;width:auto;object-fit:contain;display:block}
 
-.brand-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-.logo-emblem{display:flex;align-items:center;justify-content:center;height:48px}
-.logo-emblem svg{height:46px;width:auto}
-.logo-text{display:flex;flex-direction:column;line-height:1}
-.logo-name-black{font-size:1.45rem;font-weight:700;color:var(--negro);letter-spacing:-.01em}
-.logo-name-yellow{font-size:1.45rem;font-weight:700;color:var(--amarillo);margin-top:-2px}
-
-.header-badge{
-  font-size:.75rem;font-weight:600;color:var(--negro);
-  background:var(--amarillo-claro);padding:8px 16px;border-radius:20px;border:1.5px solid var(--amarillo);
+.header-right-badges{display:flex;align-items:center;gap:12px}
+.header-pill{
+  font-size:.76rem;font-weight:600;color:var(--negro);background:var(--amarillo-bg);
+  padding:7px 14px;border-radius:20px;border:1.5px solid var(--amarillo);display:flex;align-items:center;gap:6px;
 }
 
-/* HERO PRESENTACIÓN */
+/* HERO UX MEJORADO */
 .hero{
   background:linear-gradient(135deg,var(--negro) 0%,var(--carbon) 100%);
-  padding:44px 40px 40px;color:#fff;position:relative;overflow:hidden;
+  padding:44px 36px 40px;color:#fff;position:relative;overflow:hidden;
 }
 .hero::after{
-  content:'';position:absolute;right:-50px;top:-50px;width:380px;height:380px;border-radius:50%;
-  background:radial-gradient(circle,rgba(255,177,0,.22) 0%,transparent 70%);pointer-events:none;
+  content:'';position:absolute;right:-60px;top:-60px;width:400px;height:400px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,177,0,.25) 0%,transparent 70%);pointer-events:none;
 }
-.hero-content{max-width:1220px;margin:0 auto;display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
-.hero-eyebrow{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--amarillo);font-weight:700;margin-bottom:10px}
+.hero-content{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
+.hero-eyebrow{font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--amarillo);font-weight:700;margin-bottom:10px}
 .hero-title{font-size:clamp(1.9rem,3.4vw,3.1rem);font-weight:700;line-height:1.15;margin-bottom:12px}
 .hero-title span{color:var(--amarillo)}
 .hero-desc{font-size:.92rem;color:rgba(255,255,255,.9);line-height:1.6;max-width:540px}
-.hero-stats{display:flex;gap:28px;margin-top:22px}
-.stat-num{font-size:1.6rem;color:var(--amarillo);font-weight:700}
-.stat-label{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75)}
 
-.hero-right{display:flex;justify-content:center}
+.hero-stats{display:flex;gap:24px;margin-top:22px;flex-wrap:wrap}
+.stat-pill{
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,177,0,.3);
+  padding:8px 16px;border-radius:24px;display:flex;align-items:center;gap:8px;font-size:.8rem;color:#fff;
+}
+.stat-pill strong{color:var(--amarillo)}
+
 .hero-card{
   background:rgba(255,255,255,.08);border:1.5px solid rgba(255,177,0,.35);
-  border-radius:14px;padding:22px 28px;text-align:center;backdrop-filter:blur(6px);max-width:340px;
+  border-radius:var(--radius-lg);padding:24px;text-align:center;backdrop-filter:blur(8px);
 }
-.hero-card-icon{font-size:2.8rem;margin-bottom:8px}
-.hero-card-title{font-size:1.05rem;font-weight:700;color:var(--amarillo);margin-bottom:6px}
-.hero-card-desc{font-size:.78rem;color:rgba(255,255,255,.85);line-height:1.5}
+.hero-card img{height:54px;width:auto;margin-bottom:10px;filter:drop-shadow(0 2px 8px rgba(0,0,0,.4))}
+.hero-card-title{font-size:1.1rem;font-weight:700;color:var(--amarillo);margin-bottom:4px}
+.hero-card-desc{font-size:.8rem;color:rgba(255,255,255,.85);line-height:1.5}
 
-/* CATÁLOGO DIRECTO (SIN BARRA DE FILTROS) */
-.catalog-header{max-width:1220px;margin:32px auto 0;padding:0 40px;display:flex;align-items:center;justify-content:space-between}
-.catalog-title{font-size:1.45rem;font-weight:700;color:var(--negro)}
-.catalog-count{font-size:.8rem;color:var(--texto-muted);background:var(--blanco);padding:6px 14px;border-radius:20px;border:1px solid var(--borde)}
+/* CATÁLOGO DIRECTO */
+.catalog-header{max-width:1240px;margin:32px auto 8px;padding:0 36px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.catalog-title{font-size:1.5rem;font-weight:700;color:var(--negro)}
+.catalog-sub{font-size:.84rem;color:var(--texto-muted);margin-top:2px}
 
 .grid{
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));
-  gap:22px;padding:20px 40px 50px;max-width:1300px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:24px;padding:20px 36px 48px;max-width:1240px;margin:0 auto;
 }
 
+/* TARJETA CON EXCELENTE UX */
 .card{
   background:var(--blanco);border:1.5px solid var(--borde);
-  border-radius:12px;cursor:pointer;transition:all .2s ease;
-  position:relative;overflow:hidden;box-shadow:var(--shadow-card);display:flex;flex-direction:column;
+  border-radius:var(--radius-lg);cursor:pointer;transition:all .22s ease;
+  position:relative;overflow:hidden;box-shadow:var(--shadow-sm);
+  display:flex;flex-direction:column;
 }
-.card:hover{transform:translateY(-4px);border-color:var(--amarillo);box-shadow:0 14px 34px rgba(255,177,0,.18)}
+.card:hover{transform:translateY(-4px);border-color:var(--amarillo);box-shadow:var(--shadow-md)}
 
 .card-img{
-  width:100%;aspect-ratio:1.15;background:var(--amarillo-claro);
+  width:100%;aspect-ratio:1.15;background:var(--amarillo-bg);
   display:flex;align-items:center;justify-content:center;
-  font-size:4.5rem;position:relative;overflow:hidden;
+  position:relative;overflow:hidden;
 }
 .card-img img{width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity .25s ease}
 .card-img img.loaded{opacity:1}
 
-.badge-oferta{
-  position:absolute;top:10px;right:10px;z-index:10;
+.badge-tag{
+  position:absolute;top:12px;left:12px;z-index:10;
   background:var(--amarillo);color:var(--negro);font-size:.65rem;
-  font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:4px;
+  font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:6px;
+  box-shadow:0 2px 8px rgba(0,0,0,.15);
 }
 
-.card-hover-overlay{
-  position:absolute;inset:0;background:linear-gradient(to top,rgba(26,26,26,.88) 0%,rgba(26,26,26,.15) 60%,transparent 100%);
-  opacity:0;transition:opacity .2s ease;display:flex;align-items:flex-end;justify-content:center;padding:16px;
+.card-body{padding:20px;flex:1;display:flex;flex-direction:column}
+.card-code{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amarillo-dark);font-weight:700;margin-bottom:4px}
+.card-name{font-size:1.22rem;color:var(--negro);line-height:1.25;margin-bottom:6px;font-weight:700}
+.card-resistencia{font-size:.75rem;color:var(--texto-muted);margin-bottom:12px;display:flex;align-items:center;gap:6px}
+
+/* Muestra rápida de colores en la tarjeta */
+.card-colors{margin-bottom:14px}
+.card-colors-label{font-size:.68rem;color:var(--texto-muted);text-transform:uppercase;margin-bottom:6px;font-weight:600}
+.color-dots{display:flex;flex-wrap:wrap;gap:6px}
+.c-dot{
+  width:18px;height:18px;border-radius:50%;border:1.5px solid rgba(0,0,0,.15);
+  display:inline-block;box-shadow:0 1px 3px rgba(0,0,0,.1);
 }
-.card:hover .card-hover-overlay{opacity:1}
-.card-hover-label{
-  font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--negro);background:var(--amarillo);padding:8px 16px;border-radius:4px;
-  font-weight:700;display:flex;align-items:center;gap:6px;
+
+.card-footer{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-top:14px;border-top:1px solid var(--borde);margin-top:auto;gap:12px;
 }
+.card-price-box{display:flex;flex-direction:column}
+.card-price-old{font-size:.76rem;color:var(--texto-muted);text-decoration:line-through}
+.card-price{font-size:1.45rem;font-weight:700;color:var(--negro);line-height:1}
+.card-price small{font-size:.85rem;font-weight:500;color:var(--texto-muted)}
 
-.card-body{padding:18px 20px 20px;flex:1;display:flex;flex-direction:column}
-.card-code{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--amarillo-dark);font-weight:700;margin-bottom:4px}
-.card-name{font-size:1.2rem;color:var(--negro);line-height:1.25;margin-bottom:6px;font-weight:700}
-.card-resistencia{font-size:.72rem;color:var(--texto-muted);margin-bottom:12px}
+.btn-card-wa{
+  padding:10px 14px;background:var(--verde-wa);color:#fff;border:none;border-radius:var(--radius-md);
+  font-family:'Fredoka',sans-serif;font-size:.76rem;font-weight:700;cursor:pointer;
+  display:flex;align-items:center;gap:6px;text-transform:uppercase;letter-spacing:.05em;
+  transition:background .15s ease;
+}
+.btn-card-wa:hover{background:var(--verde-wa-dark)}
 
-/* Pastillas de colores en la tarjeta */
-.card-colors{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:14px}
-.color-pill-mini{font-size:.6rem;padding:2px 7px;border-radius:12px;background:var(--fondo);border:1px solid var(--borde);color:var(--texto)}
-
-.card-footer{display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid var(--borde);margin-top:auto}
-.card-price{font-size:1.45rem;font-weight:700;color:var(--negro)}
-.card-price small{font-size:.82rem;font-weight:400;color:var(--texto-muted)}
-
-/* MODAL */
-.overlay{display:none;position:fixed;inset:0;background:rgba(26,26,26,.82);backdrop-filter:blur(4px);z-index:200;align-items:center;justify-content:center;padding:16px}
+/* MODAL DE DETALLE */
+.overlay{display:none;position:fixed;inset:0;background:rgba(20,20,20,.82);backdrop-filter:blur(4px);z-index:200;align-items:center;justify-content:center;padding:16px}
 .overlay.open{display:flex}
-.modal{background:#fff;width:100%;max-width:960px;max-height:92vh;border-radius:14px;overflow-y:auto;display:grid;grid-template-columns:1fr 1.1fr;box-shadow:0 20px 60px rgba(0,0,0,.35)}
-.modal-media{background:var(--amarillo-claro);display:flex;flex-direction:column;position:relative}
+.modal{background:#fff;width:100%;max-width:960px;max-height:92vh;border-radius:var(--radius-lg);overflow-y:auto;display:grid;grid-template-columns:1fr 1.15fr;box-shadow:0 24px 60px rgba(0,0,0,.4)}
+.modal-media{background:var(--amarillo-bg);display:flex;flex-direction:column;position:relative}
 .modal-close{
   position:absolute;top:14px;right:14px;z-index:10;
   background:var(--negro);border:none;color:#fff;font-size:1.4rem;font-weight:700;
@@ -180,32 +191,36 @@ header{
 #imgArea{width:100%;flex:1;min-height:380px;position:relative;display:flex;align-items:center;justify-content:center}
 #mImg{position:absolute;inset:20px;width:calc(100% - 40px);height:calc(100% - 40px);object-fit:contain;opacity:0;transition:opacity .2s}
 #mImg.loaded{opacity:1}
-#mEmojiLarge{font-size:6.5rem;opacity:.3}
 
-.modal-info{padding:32px 28px;display:flex;flex-direction:column;overflow-y:auto}
+.modal-info{padding:30px 28px;display:flex;flex-direction:column;overflow-y:auto}
 .m-name{font-size:1.75rem;font-weight:700;color:var(--negro);line-height:1.2;margin-bottom:6px}
 .m-divider{height:1px;background:var(--borde);margin:14px 0}
 .m-price{font-size:2.2rem;font-weight:700;color:var(--negro)}
 .m-price-note{font-size:.72rem;color:var(--texto-muted);margin-top:2px;margin-bottom:16px}
 
-/* SELECTOR DE COLORES EN MODAL */
-.m-color-selector{background:var(--amarillo-claro);border:1.5px solid var(--amarillo);border-radius:8px;padding:12px 14px;margin-bottom:16px}
-.m-color-title{font-size:.74rem;font-weight:700;color:var(--negro);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
-.m-color-chips{display:flex;flex-wrap:wrap;gap:6px}
-.m-chip{
-  padding:6px 12px;font-size:.75rem;border-radius:20px;background:#fff;border:1.5px solid var(--borde);
-  cursor:pointer;font-weight:600;color:var(--texto);transition:all .15s ease;
+/* SELECTOR VISUAL DE COLORES EN MODAL */
+.m-color-selector{background:var(--amarillo-bg);border:1.5px solid var(--amarillo);border-radius:var(--radius-md);padding:14px;margin-bottom:16px}
+.m-color-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.m-color-title{font-size:.78rem;font-weight:700;color:var(--negro);text-transform:uppercase;letter-spacing:.06em}
+.m-color-active-name{font-size:.82rem;font-weight:700;color:var(--amarillo-dark)}
+.m-color-chips{display:flex;flex-wrap:wrap;gap:8px}
+
+.m-swatch{
+  display:flex;align-items:center;gap:7px;padding:6px 12px;background:#fff;border:1.5px solid var(--borde);
+  border-radius:20px;cursor:pointer;font-family:'Fredoka',sans-serif;font-size:.78rem;font-weight:600;
+  transition:all .15s ease;
 }
-.m-chip:hover{border-color:var(--amarillo);background:#fff9ed}
-.m-chip.active{background:var(--negro);color:var(--amarillo);border-color:var(--negro)}
+.m-swatch:hover{border-color:var(--amarillo);transform:scale(1.02)}
+.m-swatch.active{background:var(--negro);color:#fff;border-color:var(--negro);box-shadow:0 3px 10px rgba(0,0,0,.15)}
+.m-swatch-circle{width:16px;height:16px;border-radius:50%;border:1px solid rgba(0,0,0,.2);flex-shrink:0}
 
 .m-specs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
 .spec{padding:10px 12px;background:var(--fondo);border:1px solid var(--borde);border-radius:6px}
 .spec-l{font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--texto-muted);margin-bottom:3px}
 .spec-v{font-size:.85rem;font-weight:600;color:var(--texto)}
 
-/* ENVÍO E INSTALACIÓN */
-.m-ship-section{border:1.5px solid var(--borde);border-radius:8px;margin-bottom:18px;overflow:hidden}
+/* CALCULADORA DE ENVÍO / INSTALACIÓN */
+.m-ship-section{border:1.5px solid var(--borde);border-radius:var(--radius-md);margin-bottom:18px;overflow:hidden}
 .m-ship-toggle{
   width:100%;display:flex;align-items:center;justify-content:space-between;
   padding:12px 16px;background:var(--fondo);border:none;cursor:pointer;
@@ -218,7 +233,7 @@ header{
 .ship-tab-bar{display:flex;border-bottom:1px solid var(--borde)}
 .ship-tab{
   flex:1;padding:10px;background:transparent;border:none;font-family:'Fredoka',sans-serif;
-  font-size:.75rem;font-weight:600;color:var(--texto-muted);cursor:pointer;border-bottom:2px solid transparent;
+  font-size:.76rem;font-weight:600;color:var(--texto-muted);cursor:pointer;border-bottom:2px solid transparent;
 }
 .ship-tab.active{color:var(--negro);border-bottom-color:var(--amarillo);font-weight:700}
 .ship-tab-content{padding:14px 16px}
@@ -226,55 +241,80 @@ header{
   width:100%;padding:10px 12px;border:1.5px solid var(--borde);border-radius:6px;
   font-family:'Fredoka',sans-serif;font-size:.85rem;margin-bottom:10px;outline:none;
 }
-.ship-result{padding:12px 14px;border:1.5px solid var(--amarillo);background:var(--amarillo-claro);border-radius:6px}
+.ship-result{padding:12px 14px;border:1.5px solid var(--amarillo);background:var(--amarillo-bg);border-radius:6px}
 
-.btn-wa{
-  width:100%;padding:16px;background:var(--verde-wa);color:#fff;border:none;border-radius:8px;
-  font-family:'Fredoka',sans-serif;font-size:.86rem;letter-spacing:.15em;text-transform:uppercase;font-weight:700;
+.btn-wa-modal{
+  width:100%;padding:16px;background:var(--verde-wa);color:#fff;border:none;border-radius:var(--radius-md);
+  font-family:'Fredoka',sans-serif;font-size:.88rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;
   cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;
   transition:all .15s ease;margin-top:auto;box-shadow:0 4px 16px rgba(37,211,102,.3);
 }
-.btn-wa:hover{background:#1eb855;transform:translateY(-1px)}
+.btn-wa-modal:hover{background:var(--verde-wa-dark);transform:translateY(-1px)}
 
 /* MAPA GOOGLE MAPS */
-.map-section{background:var(--negro);padding:50px 40px;color:#fff}
+.map-section{background:var(--negro);padding:50px 36px 40px;color:#fff}
 .map-title{font-size:1.6rem;font-weight:700;text-align:center;margin-bottom:6px}
-.map-subtitle{font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;color:var(--amarillo);text-align:center;margin-bottom:24px}
-.map-wrap{max-width:900px;margin:0 auto;border-radius:10px;overflow:hidden;border:3px solid rgba(255,177,0,.4);box-shadow:0 12px 36px rgba(0,0,0,.4)}
+.map-subtitle{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--amarillo);text-align:center;margin-bottom:24px}
+.map-wrap{max-width:960px;margin:0 auto;border-radius:var(--radius-lg);overflow:hidden;border:3px solid rgba(255,177,0,.45);box-shadow:0 12px 36px rgba(0,0,0,.4)}
 .map-wrap iframe{width:100%;height:380px;border:none;display:block}
 .map-actions{margin-top:16px;text-align:center}
 .map-actions a{
   display:inline-flex;align-items:center;gap:8px;padding:12px 22px;background:var(--amarillo);
-  color:var(--negro);text-decoration:none;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--negro);text-decoration:none;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;
   font-weight:700;border-radius:6px;transition:all .2s ease;
 }
 .map-actions a:hover{background:#fff;transform:translateY(-2px)}
 
-/* TESTIMONIOS Y BENEFICIOS */
-.trust-section{background:var(--blanco);padding:44px 40px;border-top:1px solid var(--borde);border-bottom:1px solid var(--borde)}
-.trust-title{font-size:1.15rem;font-weight:700;color:var(--negro);text-align:center;margin-bottom:26px;letter-spacing:.1em;text-transform:uppercase}
-.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:900px;margin:0 auto}
-.trust-item{background:var(--fondo);padding:24px 18px;border-radius:8px;border:1.5px solid var(--borde);text-align:center}
+/* SECCIÓN REDES SOCIALES (ABAJO DEL MAPA) */
+.socials-section{
+  background:var(--carbon);padding:36px 36px 44px;color:#fff;text-align:center;
+  border-top:1px solid rgba(255,255,255,.1);
+}
+.socials-title{font-size:1.15rem;font-weight:700;margin-bottom:6px;color:#fff}
+.socials-subtitle{font-size:.8rem;color:rgba(255,255,255,.7);margin-bottom:22px}
+.socials-grid{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;max-width:960px;margin:0 auto}
+
+.social-btn{
+  display:inline-flex;align-items:center;gap:10px;padding:12px 22px;
+  background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.18);
+  border-radius:30px;color:#fff;text-decoration:none;font-size:.82rem;font-weight:600;
+  transition:all .2s ease;letter-spacing:.03em;
+}
+.social-btn svg{width:20px;height:20px;fill:currentColor;flex-shrink:0}
+.social-btn:hover{transform:translateY(-3px);box-shadow:0 6px 18px rgba(0,0,0,.25)}
+
+.social-btn.facebook:hover{background:#1877F2;border-color:#1877F2;color:#fff}
+.social-btn.tiktok:hover{background:#000000;border-color:#fe2c55;color:#fff}
+.social-btn.instagram:hover{background:linear-gradient(45deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);border-color:transparent;color:#fff}
+.social-btn.whatsapp:hover{background:var(--verde-wa);border-color:var(--verde-wa);color:#fff}
+.social-btn.web:hover{background:var(--amarillo);border-color:var(--amarillo);color:var(--negro)}
+
+/* BENEFICIOS / TRUST */
+.trust-section{background:var(--blanco);padding:44px 36px;border-top:1px solid var(--borde);border-bottom:1px solid var(--borde)}
+.trust-title{font-size:1.15rem;font-weight:700;color:var(--negro);text-align:center;margin-bottom:26px;letter-spacing:.08em;text-transform:uppercase}
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:960px;margin:0 auto}
+.trust-item{background:var(--fondo);padding:24px 18px;border-radius:var(--radius-md);border:1.5px solid var(--borde);text-align:center}
 .trust-icon{font-size:2.2rem;margin-bottom:8px}
 .trust-label{font-size:1.05rem;font-weight:700;color:var(--negro);margin-bottom:4px}
-.trust-sub{font-size:.72rem;color:var(--texto-muted);line-height:1.4}
+.trust-sub{font-size:.74rem;color:var(--texto-muted);line-height:1.45}
 
-footer{background:#111111;padding:44px 40px 30px;text-align:center;color:rgba(255,255,255,.7);border-top:4px solid var(--amarillo)}
+footer{background:#111111;padding:44px 36px 30px;text-align:center;color:rgba(255,255,255,.7);border-top:4px solid var(--amarillo)}
+footer img{height:46px;width:auto;margin-bottom:14px;object-fit:contain}
 footer a{color:var(--amarillo);text-decoration:none}
 footer a:hover{color:#fff}
 .ftcopy{display:block;margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.1);font-size:.65rem;letter-spacing:.15em;text-transform:uppercase}
 
 .back-to-top{
-  position:fixed;bottom:98px;right:32px;z-index:600;width:44px;height:44px;border-radius:50%;
+  position:fixed;bottom:94px;right:28px;z-index:600;width:44px;height:44px;border-radius:50%;
   background:var(--negro);color:var(--amarillo);border:2px solid var(--amarillo);cursor:pointer;
-  display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(16px);pointer-events:none;transition:all var(--trans-fast);
+  display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(16px);pointer-events:none;transition:all .2s ease;
 }
 .back-to-top.visible{opacity:1;transform:translateY(0);pointer-events:auto}
 .back-to-top svg{width:18px;height:18px;fill:currentColor}
 
 .toast{
-  position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(20px);
-  background:var(--negro);color:#fff;padding:12px 22px;font-size:.8rem;border-radius:6px;
+  position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);
+  background:var(--negro);color:#fff;padding:12px 22px;font-size:.82rem;border-radius:8px;
   display:flex;align-items:center;gap:10px;box-shadow:0 8px 32px rgba(0,0,0,.3);z-index:9999;
   opacity:0;pointer-events:none;transition:all .25s ease;border-left:4px solid var(--verde-wa);
 }
@@ -288,9 +328,10 @@ footer a:hover{color:#fff}
 }
 @media(max-width:600px){
   .modal{grid-template-columns:1fr}
-  header{padding:12px 20px}
+  header{padding:12px 18px}
   .grid{grid-template-columns:1fr}
-  .hero{padding:30px 20px}
+  .hero{padding:30px 18px}
+  .header-pill{display:none}
 }
 </style>
 <script type="application/ld+json">
@@ -327,7 +368,7 @@ footer a:hover{color:#fff}
   <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
 </button>
 
-<!-- BOTÓN WHATSAPP -->
+<!-- WHATSAPP FLOTANTE -->
 <a class="wa-float" href="https://wa.me/51977819131?text=Hola%20Hamacas%20Lizaraso!%20%F0%9F%91%8B%20Vi%20su%20cat%C3%A1logo%20web%20y%20quisiera%20consultar%20por%20sus%20modelos%20disponibles." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
   <div class="wa-float-tooltip">¡Escríbenos al WhatsApp!</div>
@@ -339,36 +380,14 @@ footer a:hover{color:#fff}
 
 <div class="topbar">🇵🇪 Fabricantes Peruanos · <span>hamacasperu.com</span> · Lima, Perú</div>
 
+<!-- HEADER CON EL LOGO REAL ORIGINAL -->
 <header>
   <div class="header-top">
-    <!-- LOGO OFICIAL VECTORIZADO SEGÚN IMAGEN -->
     <a href="#" class="brand-logo" id="logo" aria-label="Hamacas Lizaraso — Inicio">
-      <div class="logo-emblem">
-        <svg viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Sol amarillo -->
-          <circle cx="58" cy="50" r="32" fill="#FFB100"/>
-          <!-- Palmera Izquierda -->
-          <path d="M22 62C24 45 32 35 44 28" stroke="#1A1A1A" stroke-width="4.5" stroke-linecap="round"/>
-          <path d="M42 27C34 22 24 23 16 28C22 23 30 18 43 27Z" fill="#1A1A1A"/>
-          <path d="M44 26C42 16 35 10 24 8C33 12 40 18 45 28Z" fill="#1A1A1A"/>
-          <path d="M46 27C52 18 58 13 68 11C60 16 54 20 45 28Z" fill="#1A1A1A"/>
-          <!-- Palmera Derecha -->
-          <path d="M78 62C76 42 66 30 52 20" stroke="#1A1A1A" stroke-width="5" stroke-linecap="round"/>
-          <path d="M52 19C60 14 70 14 80 18C72 14 62 11 50 19Z" fill="#1A1A1A"/>
-          <path d="M50 18C52 9 60 4 72 2C62 5 55 10 49 19Z" fill="#1A1A1A"/>
-          <path d="M49 19C42 11 34 8 22 8C32 11 40 14 50 20Z" fill="#1A1A1A"/>
-          <!-- Hamaca entre las palmeras -->
-          <path d="M30 46Q52 64 72 44" stroke="#1A1A1A" stroke-width="6" stroke-linecap="round"/>
-          <path d="M30 46Q52 64 72 44" stroke="#FFB100" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <div class="logo-text">
-        <span class="logo-name-black">Hamacas</span>
-        <span class="logo-name-yellow">Lizaraso</span>
-      </div>
+      <img src="https://hamacasperu.com/wp-content/uploads/2025/08/cropped-cropped-logo-hamacas-lizaraso-principal.png" alt="Hamacas Lizaraso">
     </a>
-    <div class="header-right">
-      <div class="header-badge">⭐ 4.9 Calificación Google</div>
+    <div class="header-right-badges">
+      <div class="header-pill">⭐ 4.9 en Google Maps</div>
     </div>
   </div>
 </header>
@@ -376,41 +395,34 @@ footer a:hover{color:#fff}
 <section class="hero" aria-label="Presentación">
   <div class="hero-content">
     <div class="hero-left">
-      <div class="hero-eyebrow">100% Algodón Peruano &amp; Alta Resistencia</div>
-      <h1 class="hero-title">El verdadero descanso<br>con <span>Hamacas Lizaraso</span></h1>
-      <p class="hero-desc">Fabricamos las tradicionales hamacas andinas de algodón peruano en 7 colores vivos, sujetadores probados de hasta 300 kg y bases metálicas para disfrutar en cualquier lugar.</p>
+      <div class="hero-eyebrow">Algodón Andino &amp; Confort Total</div>
+      <h1 class="hero-title">El descanso perfecto con<br><span>Hamacas Lizaraso</span></h1>
+      <p class="hero-desc">Fabricantes directos de hamacas andinas 100% algodón peruano en 7 colores vivos, sujetadores reforzados de 150 kg y 300 kg, soportes portátiles e instalación a domicilio.</p>
       <div class="hero-stats">
-        <div class="stat-item">
-          <div class="stat-num">7 Colores</div>
-          <div class="stat-label">Hamaca Andina</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">150 y 300 kg</div>
-          <div class="stat-label">Sujetadores</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">Desde S/ 75</div>
-          <div class="stat-label">Instalación Lima</div>
-        </div>
+        <div class="stat-pill"><strong>7 Colores</strong> en Algodón</div>
+        <div class="stat-pill"><strong>150 y 300 kg</strong> Certificados</div>
+        <div class="stat-pill"><strong>Instalación</strong> desde S/ 75</div>
       </div>
     </div>
     <div class="hero-right">
       <div class="hero-card">
-        <div class="hero-card-icon">☀️</div>
-        <div class="hero-card-title">Hamacas Lizaraso</div>
-        <div class="hero-card-desc">Garantía directa de fabricante. Envíos diarios a todo el Perú y entregas en Miraflores.</div>
+        <img src="https://hamacasperu.com/wp-content/uploads/2025/08/cropped-cropped-logo-hamacas-lizaraso-principal.png" alt="Hamacas Lizaraso">
+        <div class="hero-card-title">Garantía de Fábrica</div>
+        <div class="hero-card-desc">Atención personalizada por WhatsApp, envíos rápidos a todo el país y recojo en Miraflores.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ENCABEZADO DEL CATÁLOGO DIRECTO -->
+<!-- ENCABEZADO DEL CATÁLOGO -->
 <div class="catalog-header">
-  <div class="catalog-title">Nuestros Modelos y Accesorios</div>
-  <div class="catalog-count">7 Opciones Disponibles</div>
+  <div>
+    <h2 class="catalog-title">Catálogo Oficial de Productos</h2>
+    <p class="catalog-sub">Haz clic en cualquier producto para ver medidas, elegir color y cotizar por WhatsApp</p>
+  </div>
 </div>
 
-<!-- GRILLA DIRECTA DE PRODUCTOS (SIN FILTROS) -->
+<!-- GRILLA DIRECTA DE PRODUCTOS -->
 <main id="grid" class="grid" role="region" aria-label="Productos"></main>
 
 <!-- MODAL DETALLE DE PRODUCTO -->
@@ -419,7 +431,6 @@ footer a:hover{color:#fff}
     <div class="modal-media">
       <button class="modal-close" id="modalCloseBtn" aria-label="Cerrar">×</button>
       <div id="imgArea">
-        <div id="mEmojiLarge">☀️</div>
         <img id="mImg" src="" alt="" loading="eager">
       </div>
     </div>
@@ -429,9 +440,12 @@ footer a:hover{color:#fff}
       <div class="m-price" id="mPrice"></div>
       <div class="m-price-note">Precio en Soles (S/) · Garantía Oficial Hamacas Lizaraso</div>
 
-      <!-- SELECTOR DE LOS 7 COLORES (SI APLICA) -->
+      <!-- SELECTOR DE LOS 7 COLORES CON MUESTRAS REALES -->
       <div class="m-color-selector" id="mColorBox" style="display:none">
-        <div class="m-color-title">🎨 Elige tu color preferido:</div>
+        <div class="m-color-header">
+          <span class="m-color-title">🎨 Selecciona tu color:</span>
+          <span class="m-color-active-name" id="mActiveColorName">Rasta</span>
+        </div>
         <div class="m-color-chips" id="mColorChips"></div>
       </div>
 
@@ -482,14 +496,14 @@ footer a:hover{color:#fff}
             <ul style="padding-left:18px;font-size:.78rem;line-height:1.6;color:var(--texto)">
               <li><strong>Agencias Shalom / Marvisur:</strong> Pago de flete al recoger en tu agencia más cercana.</li>
               <li><strong>Olva Courier:</strong> Envío directo hasta la puerta de tu casa a nivel nacional.</li>
-              <li><strong>Despachos diarios</strong> con número de seguimiento.</li>
+              <li><strong>Despachos diarios</strong> con número de seguimiento vía WhatsApp.</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <button class="btn-wa" id="mWA">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      <button class="btn-wa-modal" id="mWA">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
         Consultar / Pedir por WhatsApp
       </button>
     </div>
@@ -520,7 +534,7 @@ footer a:hover{color:#fff}
 
 <!-- UBICACIÓN GOOGLE MAPS -->
 <section class="map-section" aria-label="Ubicación oficial en Google Maps">
-  <div class="map-title">📍 Ubicación oficial en Google Maps</div>
+  <div class="map-title">📍 Visítanos o Recoge tu Pedido</div>
   <div class="map-subtitle">Hamacas Lizaraso - (Solo Recojo de Pedidos) · Miraflores, Lima</div>
   <div class="map-wrap">
     <iframe
@@ -531,15 +545,52 @@ footer a:hover{color:#fff}
   </div>
   <div class="map-actions">
     <a href="https://maps.google.com/?cid=6264969242940284453" target="_blank" rel="noopener noreferrer">
-      🗺️ Abrir ficha en Google Maps
+      🗺️ Abrir ficha oficial en Google Maps
+    </a>
+  </div>
+</section>
+
+<!-- REDES SOCIALES OFICIALES (DEBAJO DEL MAPA) -->
+<section class="socials-section" aria-label="Redes Sociales Oficiales">
+  <h3 class="socials-title">Conéctate con Hamacas Lizaraso</h3>
+  <p class="socials-subtitle">Síguenos en nuestras redes sociales para ver videos reales, testimonios e instalaciones:</p>
+  <div class="socials-grid">
+    <!-- FACEBOOK -->
+    <a href="https://www.facebook.com/FabricantedeHamacasLizaraso/" target="_blank" rel="noopener noreferrer" class="social-btn facebook" aria-label="Facebook de Hamacas Lizaraso">
+      <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      <span>Facebook</span>
+    </a>
+
+    <!-- TIKTOK -->
+    <a href="https://www.tiktok.com/@hamacaslizaraso" target="_blank" rel="noopener noreferrer" class="social-btn tiktok" aria-label="TikTok de Hamacas Lizaraso">
+      <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+      <span>TikTok</span>
+    </a>
+
+    <!-- INSTAGRAM -->
+    <a href="https://www.instagram.com/hamacaslizaraso/" target="_blank" rel="noopener noreferrer" class="social-btn instagram" aria-label="Instagram de Hamacas Lizaraso">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      <span>Instagram</span>
+    </a>
+
+    <!-- WHATSAPP -->
+    <a href="https://wa.me/51977819131" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp" aria-label="WhatsApp Oficial">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+
+    <!-- WEB -->
+    <a href="https://hamacasperu.com" target="_blank" rel="noopener noreferrer" class="social-btn web" aria-label="Sitio Web Oficial">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+      <span>hamacasperu.com</span>
     </a>
   </div>
 </section>
 
 <footer>
-  <p style="font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:6px">HAMACAS LIZARASO</p>
+  <img src="https://hamacasperu.com/wp-content/uploads/2025/08/cropped-cropped-logo-hamacas-lizaraso-principal.png" alt="Hamacas Lizaraso">
   <p>Galería Cuzco Market, Av. Petit Thouars 5466, Miraflores, Lima, Perú</p>
-  <p style="margin-top:8px">WhatsApp: <a href="https://wa.me/51977819131">+51 977 819 131</a> · Web: <a href="https://hamacasperu.com" target="_blank" rel="noopener noreferrer">hamacasperu.com</a></p>
+  <p style="margin-top:8px">WhatsApp: <a href="https://wa.me/51977819131">+51 977 819 131</a> · Sitio Web Oficial: <a href="https://hamacasperu.com" target="_blank" rel="noopener noreferrer">hamacasperu.com</a></p>
   <span class="ftcopy">© 2026 Hamacas Lizaraso · Todos los derechos reservados</span>
 </footer>
 
@@ -547,96 +598,106 @@ footer a:hover{color:#fff}
 'use strict';
 const WA_NUMBER = '51977819131';
 
-// ── LOS 7 COLORES EXACTOS DE LA HAMACA ANDINA SEGÚN FOTO ───────────────────────
+// Muestrarios de color con estilo visual
+const COLOR_CONFIG = {
+  'Rasta': { bg: 'linear-gradient(135deg, #E53935 0%, #FDD835 50%, #43A047 100%)', label: 'Rasta' },
+  'Negro': { bg: '#1A1A1A', label: 'Negro' },
+  'Verde': { bg: '#2E7D32', label: 'Verde' },
+  'Multicolor': { bg: 'linear-gradient(135deg, #FF6F00 0%, #D81B60 33%, #8E24AA 66%, #1E88E5 100%)', label: 'Multicolor' },
+  'Azul': { bg: '#1565C0', label: 'Azul' },
+  'Rosado': { bg: '#E91E63', label: 'Rosado' },
+  'Crema': { bg: '#F5EBE0', label: 'Crema' }
+};
+
 const COLORES_ANDINA = ['Rasta', 'Negro', 'Verde', 'Multicolor', 'Azul', 'Rosado', 'Crema'];
 
-// ── PRODUCTOS HAMACAS LIZARASO ───────────────────────────────────────────────
+// PRODUCTOS HAMACAS LIZARASO
 const productos = [
   {
     code: 'HA-150',
     name: 'Hamaca Andina Plaza y Media',
+    badge: '⭐ Más Vendido',
     price: 135,
     priceOld: 160,
     medidas: '3.00 m largo total × 1.40 m ancho',
     resistencia: 'Hasta 130 kg (1 a 2 personas)',
     material: '100% Algodón Peruano trenzado artesanal',
-    emoji: '🛋️',
     colores: COLORES_ANDINA,
     img: 'https://hamacasperu.com/wp-content/uploads/2024/05/RASTA-3.jpg'
   },
   {
     code: 'SJ-150',
     name: 'Sujetador de Pared 150 Kilos',
+    badge: 'Fijación Segura',
     price: 65,
-    medidas: 'Set de 2 puntos de fijación completos',
+    medidas: 'Set de 2 puntos de anclaje completos',
     resistencia: '150 kg certificados',
-    material: 'Pernos armella zincados + tarugos expansivos + sogas de nylon',
-    emoji: '⚓',
+    material: 'Pernos armella zincados + tarugos expansivos + sogas de nylon alta resistencia',
     colores: ['Galvanizado / Dorado'],
     img: 'https://hamacasperu.com/wp-content/uploads/2021/04/sujetadores-300x300.png'
   },
   {
     code: 'SJ-300',
     name: 'Sujetador Reforzado 300 Kilos',
+    badge: 'Alto Impacto',
     price: 95,
     priceOld: 115,
-    medidas: 'Set de 2 puntos industriales de alta resistencia',
-    resistencia: '300 kg probados para pared de concreto o viga',
-    material: 'Acero estructural reforzado + mosquetones náuticos + sogas de alto impacto',
-    emoji: '🔩',
+    medidas: 'Set industrial de 2 puntos reforzados',
+    resistencia: '300 kg probados en pared o viga',
+    material: 'Acero estructural reforzado + mosquetones náuticos + sogas trenzadas',
     colores: ['Acero Inoxidable'],
     img: 'https://hamacasperu.com/wp-content/uploads/2021/04/sujetadores-300x300.png'
   },
   {
     code: 'SP-BASE',
     name: 'Soporte o Base para Hamaca (Metal)',
+    badge: 'Portátil',
     price: 350,
     priceOld: 400,
     medidas: '3.10 m largo × 1.00 m base × 1.15 m alto',
     resistencia: 'Hasta 180 kg',
     material: 'Estructura tubular de acero desarmable con pintura anticorrosiva',
-    emoji: '🏗️',
     colores: ['Negro Mate'],
     img: 'https://hamacasperu.com/wp-content/uploads/2020/11/soporte-1.png'
   },
   {
     code: 'SRV-INST',
-    name: 'Servicio de Instalación a Domicilio',
+    name: 'Servicio de Instalación en Lima',
+    badge: 'A Domicilio',
     price: 75,
-    medidas: 'A domicilio en distritos de Lima',
-    resistencia: 'Garantía de fijación y nivelación segura',
-    material: 'Perforación profesional con taladro percutor en ladrillo, concreto o vigas',
-    emoji: '🛠️',
+    medidas: 'En distritos de Lima Metropolitana',
+    resistencia: 'Fijación garantizada por técnicos',
+    material: 'Instalación con taladro percutor en ladrillo, concreto o vigas',
     colores: ['Servicio Técnico'],
     img: 'https://hamacasperu.com/wp-content/uploads/2021/07/47.jpg'
   },
   {
     code: 'PROM-02',
     name: 'Promoción 2: Hamaca Andina + Sujetadores',
+    badge: '🔥 Combo Ahorro',
     price: 180,
     priceOld: 225,
-    medidas: 'Hamaca 1.5 Plazas + Kit completo de 2 sujetadores',
+    medidas: 'Hamaca 1.5 Plazas + Juego completo de 2 sujetadores',
     resistencia: 'Hasta 150 kg en pared',
-    material: 'Algodón peruano + ganchos y sogas listos para usar',
-    emoji: '🎁',
+    material: 'Algodón peruano + ganchos y sogas listos para colgar',
     colores: COLORES_ANDINA,
     img: 'https://hamacasperu.com/wp-content/uploads/2025/01/Promocion-2.png'
   },
   {
     code: 'PROM-03',
-    name: 'Promoción 3: Hamaca Andina + Soporte de Metal',
+    name: 'Promoción 3: Hamaca Andina + Soporte Metal',
+    badge: '⭐ Todo en Uno',
     price: 450,
     priceOld: 535,
     medidas: 'Base metálica portátil + Hamaca Andina completa',
-    resistencia: 'Hasta 180 kg (No requiere taladrar paredes)',
+    resistencia: 'Hasta 180 kg (Sin taladrar paredes)',
     material: 'Soporte de acero + Hamaca de algodón',
-    emoji: '⭐',
     colores: COLORES_ANDINA,
     img: 'https://hamacasperu.com/wp-content/uploads/2022/02/soporte-hamaca.png'
   }
 ];
 
-const WA_SVG = `<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>`;
+const WA_SVG = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>`;
 
 const DOM = {
   grid: document.getElementById('grid'),
@@ -647,6 +708,7 @@ const DOM = {
   mSpecs: document.getElementById('mSpecs'),
   mColorBox: document.getElementById('mColorBox'),
   mColorChips: document.getElementById('mColorChips'),
+  mActiveColorName: document.getElementById('mActiveColorName'),
   mWA: document.getElementById('mWA'),
   mImg: document.getElementById('mImg'),
   toast: document.getElementById('toast'),
@@ -672,58 +734,83 @@ function showToast() {
   setTimeout(() => DOM.toast.classList.remove('show'), 2400);
 }
 
-// RENDER DIRECTO DE LAS 7 OPCIONES
+// RENDER DE TARJETAS
 function render() {
   DOM.grid.innerHTML = productos.map((p, idx) => {
-    const colorChipsHtml = p.colores && p.colores.length > 1
-      ? `<div class="card-colors">` + p.colores.map(c => `<span class="color-pill-mini">${esc(c)}</span>`).join('') + `</div>`
-      : '';
+    let colorDotsHtml = '';
+    if (p.colores && p.colores.length > 1) {
+      colorDotsHtml = `
+        <div class="card-colors">
+          <div class="card-colors-label">7 colores disponibles:</div>
+          <div class="color-dots">
+            ${p.colores.map(c => {
+              const bg = COLOR_CONFIG[c] ? COLOR_CONFIG[c].bg : '#ccc';
+              return `<span class="c-dot" style="background:${bg}" title="${esc(c)}"></span>`;
+            }).join('')}
+          </div>
+        </div>`;
+    }
 
     return `
-      <div class="card" data-idx="${idx}">
+      <div class="card" onclick="openModal(${idx})">
         <div class="card-img">
-          ${p.priceOld ? `<div class="badge-oferta">Oferta -S/ ${p.priceOld - p.price}</div>` : ''}
-          <span>${p.emoji}</span>
+          ${p.badge ? `<div class="badge-tag">${esc(p.badge)}</div>` : ''}
           <img src="${esc(p.img)}" alt="${esc(p.name)}" loading="lazy" onload="this.classList.add('loaded')" onerror="this.style.display='none'">
           <div class="card-hover-overlay">
-            <div class="card-hover-label">${WA_SVG} Ver detalle</div>
+            <div class="card-hover-label">Ver detalles y fotos</div>
           </div>
         </div>
         <div class="card-body">
           <div class="card-code">${esc(p.code)}</div>
           <div class="card-name">${esc(p.name)}</div>
           <div class="card-resistencia">⚖️ ${esc(p.resistencia)}</div>
-          ${colorChipsHtml}
+          ${colorDotsHtml}
           <div class="card-footer">
-            <div class="card-price">
-              ${p.priceOld ? `<span style="display:block;font-size:.74rem;color:var(--texto-muted);text-decoration:line-through">S/ ${p.priceOld}</span>` : ''}
-              <small>S/ </small>${p.price}
+            <div class="card-price-box">
+              ${p.priceOld ? `<span class="card-price-old">S/ ${p.priceOld}</span>` : ''}
+              <div class="card-price"><small>S/ </small>${p.price}</div>
             </div>
+            <button class="btn-card-wa" onclick="event.stopPropagation(); quickWA(${idx})">
+              ${WA_SVG} Pedir
+            </button>
           </div>
         </div>
       </div>`;
   }).join('');
 }
 
-DOM.grid.addEventListener('click', e => {
-  const c = e.target.closest('.card');
-  if (c && c.dataset.idx !== undefined) openModal(parseInt(c.dataset.idx, 10));
-});
+function quickWA(idx) {
+  const p = productos[idx];
+  showToast();
+  const msg = encodeURIComponent(
+    `Hola Hamacas Lizaraso! 👋 Me interesa comprar directamente el producto:\n\n` +
+    `📦 *${p.name}* (Código: ${p.code})\n` +
+    `💰 Precio: S/ ${p.price}\n\n` +
+    `¿Tienen disponibilidad hoy para entrega o recojo en Miraflores? Gracias!`
+  );
+  window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, '_blank');
+}
 
 function openModal(idx) {
   const p = productos[idx];
   DOM.mName.textContent = p.name;
   DOM.mPrice.innerHTML = p.priceOld
-    ? `<span style="font-size:1.1rem;color:var(--texto-muted);text-decoration:line-through">S/ ${p.priceOld}</span> S/ ${p.price}`
+    ? `<span style="font-size:1.1rem;color:var(--texto-muted);text-decoration:line-through;margin-right:8px">S/ ${p.priceOld}</span> S/ ${p.price}`
     : `<small style="font-size:1.1rem;font-weight:400;color:var(--texto-muted)">S/ </small>${p.price}`;
 
-  // Selector de colores interactivo
+  // Selector visual de los 7 colores
   if (p.colores && p.colores.length > 1) {
-    colorSeleccionado = p.colores[0]; // por defecto el primero (Rasta)
+    colorSeleccionado = p.colores[0]; // Rasta por defecto
+    DOM.mActiveColorName.textContent = colorSeleccionado;
     DOM.mColorBox.style.display = 'block';
-    DOM.mColorChips.innerHTML = p.colores.map((c, i) => `
-      <button class="m-chip ${i === 0 ? 'active' : ''}" onclick="selectColor('${esc(c)}', this)">${esc(c)}</button>
-    `).join('');
+    DOM.mColorChips.innerHTML = p.colores.map((c, i) => {
+      const bg = COLOR_CONFIG[c] ? COLOR_CONFIG[c].bg : '#ccc';
+      return `
+        <button class="m-swatch ${i === 0 ? 'active' : ''}" onclick="selectColor('${esc(c)}', this)">
+          <span class="m-swatch-circle" style="background:${bg}"></span>
+          <span>${esc(c)}</span>
+        </button>`;
+    }).join('');
   } else {
     colorSeleccionado = (p.colores && p.colores[0]) || '';
     DOM.mColorBox.style.display = 'none';
@@ -743,7 +830,7 @@ function openModal(idx) {
 
   DOM.mWA.onclick = () => {
     showToast();
-    const colorTexto = colorSeleccionado ? `\n🎨 Color seleccionado: *${colorSeleccionado}*` : '';
+    const colorTexto = colorSeleccionado ? `\n🎨 Color elegido: *${colorSeleccionado}*` : '';
     const msg = encodeURIComponent(
       `Hola Hamacas Lizaraso! 👋 Vi en su catálogo (hamacasperu.com) el producto:\n\n` +
       `☀️ *${p.name}* (Código: ${p.code})\n` +
@@ -758,8 +845,9 @@ function openModal(idx) {
 
 window.selectColor = function(color, btn) {
   colorSeleccionado = color;
-  const chips = DOM.mColorChips.querySelectorAll('.m-chip');
-  chips.forEach(c => c.classList.remove('active'));
+  DOM.mActiveColorName.textContent = color;
+  const swatches = DOM.mColorChips.querySelectorAll('.m-swatch');
+  swatches.forEach(s => s.classList.remove('active'));
   btn.classList.add('active');
 };
 
@@ -798,9 +886,9 @@ function evalDistrict() {
       🚚 Opciones para ${esc(nombre)}:
     </div>
     <ul style="padding-left:16px;font-size:.75rem;line-height:1.5;color:var(--texto)">
-      <li>Costo aproximado de delivery: <strong>S/ ${esc(costo)}</strong>.</li>
+      <li>Costo aproximado de delivery motorizado: <strong>S/ ${esc(costo)}</strong>.</li>
       <li>Servicio de instalación profesional disponible desde <strong>S/ 75</strong>.</li>
-      <li>Recojo directo sin costo de envío en: <strong>Galería Cuzco Market, Av. Petit Thouars 5466, Miraflores</strong>.</li>
+      <li>Recojo directo en tienda sin costo de envío en: <strong>Galería Cuzco Market, Av. Petit Thouars 5466, Miraflores</strong>.</li>
     </ul>`;
   DOM.shipResult.style.display = 'block';
 }
@@ -810,7 +898,7 @@ window.addEventListener('scroll', () => {
 });
 DOM.backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-// Inicio
+// Iniciar catálogo
 render();
 </script>
 </body>
